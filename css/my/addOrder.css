@@ -1,0 +1,134 @@
+i {
+  font-style: normal;
+}
+body {
+  background-color: #f8f8f8
+}
+/*.search {
+  width: 100%;
+  height: .88rem;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow: hidden
+}
+input[type="search"] {
+  width: calc(100% - .6rem);
+  height: .53rem;
+  background-color: rgb(255, 255, 255);
+  display: block;
+  margin-top: .18rem;
+  margin-left: .3rem;
+  font-size: .28rem;
+  font-family: PingFangSC-Regular;
+  color: #424242;
+  border: 1px solid #E0E0E0;
+  border-radius: .08rem;
+  padding-left: .3rem;
+  text-align: center;
+  outline: none
+}
+input[type="search"]::-webkit-input-placeholder {
+  color: #ccc
+}*/
+header {
+  height: 1rem;
+  background-color: #fff;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  z-index: 2;
+}
+.flex{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.mouths {
+  width: 33.333%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 1rem;
+  float: left;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  color: #9E9E9E;
+  line-height: initial;
+}
+.mouths .mouth {
+  font-family: PingFangSC-Medium;
+  font-size: .36rem;
+}
+.mouths .year {
+  font-family: PingFangSC-Regular;
+  font-size: .2rem;
+}
+.active {
+  color: rgb(211, 162, 124);
+  border-bottom: 3px solid
+}
+.mouth::after {
+  content: '月';
+  font-family: PingFangSC-Regular;
+  font-size: .2rem;
+  color: inherit;
+}
+.section {
+  margin-top: .2rem;
+  background: rgba(255, 255, 255, 0.90);
+  -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.10);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.10);
+  width: 100%;
+  padding-bottom: .01rem;
+  line-height: initial;
+}
+.line{
+  height: .66rem;
+}
+.section i{
+  font-family: PingFangSC-Medium;
+  float: left;
+  margin-top: .3rem;
+  letter-spacing: 0;
+  font-size: .32rem;
+
+}
+.section .carOwner {
+  color: #424242;
+  margin-left: .3rem
+}
+.section .licenseNo {
+  background: rgba(53, 188, 249, .1);
+  border-radius: 100px;
+  font-size: .24rem;
+  padding: .04rem .22rem;
+  color: rgb(53, 188, 249);
+  margin-left: .6rem
+}
+.section .date {
+  float: right;
+  margin-right: .3rem;
+  font-size: .28rem;
+  color: #EF5350;
+}
+.section .totalFee {
+  font-family: PingFangSC-Medium;
+  color: rgb(53, 188, 249);
+  float: right;
+  margin-right: .2rem;
+}
+.section p {
+  font-family: PingFangSC-Regular;
+  font-size: .28rem;
+  color: rgb(158, 158, 158);
+  letter-spacing: 0;
+  margin: .28rem .3rem;
+  line-height: initial;
+}

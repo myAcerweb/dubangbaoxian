@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=0.5, minimum-scale=0.5, maximum-scale=0.5, user-scalable=no"/>
+    <link rel="stylesheet" href="../css/loading.css">
+    <link rel="stylesheet" href="../css/toast.css">
+    <link rel="stylesheet" type="text/css" href="../css/products/products.css">
+    <link rel="stylesheet" type="text/css" href="../css/products/success.css">
+    <link rel="stylesheet" type="text/css" href="../css/reset.css">
+</head>
+<body class="bg-color-f8f8f8">
+<section class="section bg-color-fff">
+    <img src="../images/icon_pay.png" alt="">
+    <div class="name">尊敬的<span id="name"></span></div>
+    <div class="product">你购买的<span id="productName"></span>产品已经投保成功</div>
+    <div class="quotation">
+        <p id="insuranceBI" class="none"></p>
+        <p id="insuranceCI" class="none"></p>
+        <p id="insuranceNO" class="none"></p>
+    </div>
+    <div class="tips">感谢您购买我们的保险产品！如您有任何疑问，请拨打我们的免费热线
+        <a class="color-d3a27c" href="tel: 95586">95586</a> 进行咨询。
+    </div>
+</section>
+<div class="section flex">
+    <button class="btn wechat"></button>
+    <button class="btn wo"></button>
+</div>
+<b class="title margin-left-20">感兴趣的产品</b>
+<div class="rowStyle" id="pro_1" style="display: none">
+    <img class="rowLeft image_url"
+         src="http://test.mobisoft.com.cn/image/download?image_no=eaa9fcfdda21430bb24d944c68f56f2d">
+    <div class="rowRight">
+        <p class="othName1">安心车行</p>
+        <p class="productionName1">为您的爱车出行提供多方案保障</p>
+        <span class="rowRightE price1">950元起</span>
+        <p style="display: none" class="category_code">5</p>
+    </div>
+</div>
+<div class="insureStyle" id="pro_0" style="display: none">
+    <div class="bg">
+        <img class="rowLeft image" src="" alt="">
+        <p class="othName">旅行意外</p>
+        <p class="productionName">旅行意外（国内+国外）</p>
+        <span class="jine price">100.00
+          <i class="start">元起</i>
+        </span>
+        <p>
+            <span class="deposit_price"></span>
+            <span class="totalSales"></span>
+        </p>
+        <p style="display: none" class="category_code"></p>
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/mobileapp.js"></script>
+<script type="text/javascript" src="../js/setrem.js"></script>
+<script type="text/javascript" src="../js/Util.js"></script>
+<script type="text/javascript" src="../js/toast.js"></script>
+<script type="text/javascript" src="../js/loading.js"></script>
+<script type="text/javascript" src="../js/ins_vehicle.js"></script>
+<script type="text/javascript" src="../js/products/success.js"></script>
+<script type="text/javascript" src="../js/wechat.js"></script>
+<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>报价结果</title>
+    <link rel="stylesheet" href="../css/normalize.min.css">
+    <link rel="stylesheet" href="../css/reset.css?v1">
+    <link rel="stylesheet" href="../css/products/ins_quotation.css">
+    <link rel="stylesheet" href="../css/confirm.css">
+    <link rel="stylesheet" href="../css/loading.css">
+    <link rel="stylesheet" href="../css/toast.css">
+</head>
+<body>
+<section style="display: none;" id="baojiaxingqing" class="details bg-color-f8f8f8">
+    <i class="font24 left padding-left-30 color-999">报价详情</i>
+    <i class=" right padding-right-30 adjust"><i class="bg-color-d3a27c color-fff font24">点此可修改投保方案</i></i>
+</section>
+<ul id="jiaoqianxian" class="xianzhong color-616161 border-bottom">
+    <li class="name jqx">
+        <b>交强险</b>
+        <i id="jiaoqiangjia" class="right color-ffa726 normal"></i>
+    </li>
+    <li class="">
+        <i class="color-9e9e9e normal">车船税</i>
+        <i class="font32 margin-left-30 normal">代缴</i>
+        <i id="chechuansui" class="right padding-left-20 normal" style="color: #ffa726;"></i>
+    </li>
+    <li class="">
+        <i class="color-9e9e9e normal">往年补缴金额</i>
+        <i id="taxOverdue" class="right padding-left-20 normal" style="color: #ffa726;""></i>
+    </li>
+    <li class="">
+        <i class="color-9e9e9e normal">滞纳金</i>
+        <i id="surCharge" class="right padding-left-20 normal" style="color: #ffa726;""></i>
+    </li>
+    <li class="">
+        <i class="font28 normal color-9e9e9e">起保期</i>
+        <i id="jiaoqiri" class="padding-left-30 normal font28 color-616161"></i>
+    </li>
+    <li class="">
+        <i class="font28 normal color-9e9e9e">终保期</i>
+        <i id="jqzb" class="padding-left-30 normal font28 color-616161"></i>
+    </li>
+</ul>
+<ul id="shangyexian" style="display: none;" class="font32 color-616161 xianzhong margin-left-30">
+    <li class="name syx">
+        <b>商业险</b>
+        <i id="shangyejia" class="right font34 color-ffa726 normal"></i>
+    </li>
+    <li class="name">
+        <i class="font28 normal color-ffa726">商业险折扣</i>
+        <i id="shangyexianzk" class="right font34 color-ffa726 normal"></i>
+    </li>
+    <li>
+        <i class="font28 normal color-9e9e9e">起保期</i>
+        <i id="shangqiri" class="padding-left-30 normal font28 color-616161"></i>
+    </li>
+    <li>
+        <i class="font28 normal color-9e9e9e">终保期</i>
+        <i id="syzb" class="padding-left-30 normal font28 color-616161"></i>
+    </li>
+</ul>
+<div style="display: none;" class="information xiangqing">
+    <li class="font28 xianzhongming"><span id="name"></span>
+        <i class="right chebaoe"> ￥500.0</i>
+        <i class="right chebaojia">￥52.0</i>
+        <i class="right color-000 isDefaultNoDuct"></i>
+    </li>
+    <br style="clear: both">
+</div>
+<div id="bg" style="display: none;" class="bg">
+    <div class="information xiangqing">
+        <li class="font28 xianzhongming">
+            <span class="color-000">险别</span>
+            <i class="right color-000 chebaoe">保额(元)</i>
+            <i class="right color-000 chebaojia">保费(元)</i>
+        </li>
+        <br style="clear: both">
+    </div>
+</div>
+<section class="">
+    <!--<div class="details font24 bg-color-f8f8f8 color-999 padding-left-30">非车险</div>
+     <div class="font32 color-616161 user jsyw margin-left-30 border-bottom bold">
+         <span>驾驶意外险</span>
+         <img class="right arrow margin-top-30 padding-right-30" src="../images/ico_arrow.png"/>
+         <i class="font32 right normal color-d3a27c padding-right-20">￥200</i>
+     </div>
+     <div class="font32 color-616161 user ze bg-dotted margin-left-30 margin-right-30 bold ">
+         <div>
+             <img class="left" src="../images/ico_leftdot.png"/><img class="right" src="../images/ico_rightdot.png"/>
+         </div>
+         总额
+         <i id="baofeitatol" class="font32 right normal color-ffa726"></i>
+     </div>-->
+</section>
+<!--<div class="details font24 color-999 bg-color-f8f8f8 padding-left-30">优惠详情</div>
+<div class="font32 color-616161 user yh margin-left-30 border-bottom bold">
+    专享优惠
+    <i class="font32 right normal color-d3a27c padding-right-20">￥200</i>
+</div>-->
+<div class="details font24 color-999 bg-color-f8f8f8 padding-left-30 isRecommendation none">推荐产品</div>
+<div class="section font32 color-616161 border-bottom bold arrow-right isRecommendation toProd none">
+    <img class="icon margin-left-30 margin-right-20" src="../images/ico_jc.png" alt="">
+    <span id="conProName"></span>
+    <i id="conProValue" class="font32 right normal color-d3a27c padding-right-20"></i>
+</div>
+<div class="section font32 color-616161 border-bottom isRecommendation none">
+    <span class="font28 color-9e9e9e margin-left-80">请选择购买份数</span>
+    <div class="mui-numbox right">
+        <button class="mui-btn mui-numbox-btn-minus" type="button"></button>
+        <span id="copy" class="mui-numbox-span">1</span>
+        <button class="mui-btn mui-numbox-btn-plus" type="button"></button>
+    </div>
+</div>
+<div class="box bg-color-f8f8f8"></div>
+<footer id="fukuan" style="display: none;" class="border-top">
+    <i class="font24 ii1 color-616161">实付</i>
+    <i id="shifujia" class="ii2 font46 color-ffa726"></i>
+    <button class="bg-color-d3a27c color-fff font34 paynow">立即投保</button>
+</footer>
+
+
+<section id="yanzhengma" class="yanzhengma none">
+    <div class="content">
+        <div class="title">请输入验证码</div>
+        <div id="checkcodeBi" class="img_input" style="display: none;">
+            <input class="input" id="" value=""/>
+            <img class="img" src="../images/ico_select_normal.png" alt=""/>
+        </div>
+        <div id="checkcodeCi" class="img_input" style="display: none;">
+            <input class="input" id="" value=""/>
+            <img class="img" src="../images/ico_select_normal.png" alt=""/>
+        </div>
+        <button class="bg-color-d3a27c color-fff font34 now-pay">立即报价</button>
+    </div>
+</section>
+
+
+<script type="text/javascript" src="../js/Util.js"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="../js/jquery-3.2.0.js"></script>
+<script src="../js/Confirm.js"></script>
+<script type="text/javascript" src="../js/toast.js"></script>
+<script src="../js/loading.js"></script>
+<script src="../js/setrem.js"></script>
+<script src="../js/mobileapp.js"></script>
+<script type="text/javascript" src="../js/wechat.js"></script>
+<script type="text/javascript" src="../js/ins_vehicle.js"></script>
+<script type="text/javascript" src="../js/products/ins_quotation.js"></script>
+<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+
+</body>
+
+</html>

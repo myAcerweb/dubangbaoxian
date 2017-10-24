@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="../css/mui.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/normalize.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/loading.css">
+    <link rel="stylesheet" type="text/css" href="../css/toast.css">
+    <link rel="stylesheet" type="text/css" href="../css/fuwu/ins_baodan.css">
+    <link rel="stylesheet" type="text/css" href="../css/my/ins_customer.css">
+    <link rel="stylesheet" type="text/css" href="../css/reset.css">
+    <title>我的客户</title>
+</head>
+
+<body>
+<header class="">
+    <div class="tab font28 active">购买时间</div>
+    <div class="tab font28">生日排序</div>
+    <div class="tab font28">保险止期</div>
+</header>
+<div class="message">
+    <div class="br">
+        <img class="imgUrl" src="" alt="">
+        <i class="label color-212121 userName"></i>
+    </div>
+    <div class="br">
+        <i class="label">成交客户数量</i>
+        <i class="value customerNum"></i>
+    </div>
+    <div class="">
+        <i class="label">合计保费</i>
+        <i class="value premium"></i>
+    </div>
+</div>
+
+<!--下拉刷新容器-->
+<div id="refreshContainer" class="mui-content mui-scroll-wrapper bg-color-f8f8f8" style="top: 2.6rem">
+    <div class="mui-scroll">
+        <!--数据列表-->
+        <div class="mui-table-view mui-table-view-chevron">
+            <div id="members"></div>
+        </div>
+    </div>
+    <img class="search" src="../images/ico_kehusousuo.png" alt="">
+</div>
+
+<div class="member margin-top-20" id="member" style="display: none;">
+    <p>
+        <span class="name"></span>
+        <img class="male" src="../images/ico_nan.png" alt="">
+        <img class="female" src="../images/ico_nv.png" alt="">
+    </p>
+    <p>
+        <span class="tel color-d3a27c"></span>
+        <span class="birthday"></span>
+    </p>
+    <p>
+        <span class="carNo"></span>
+        <span class="eDate"></span>
+    </p>
+</div>
+
+<section class="query" style="display: none">
+    <img class="margin-top-90" src="../images/icon_bao.png" alt="">
+    <input id="queryNo" class="queryNo font30" type="text" placeholder="请在此输入客户姓名">
+    <button class="queryBtn font34 bg-color-d3a27c btn-lg color-fff">查询</button>
+</section>
+<script src="../js/setrem.js"></script>
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/mobileapp.js"></script>
+<script type="text/javascript" src="../js/mui.min.js"></script>
+<script type="text/javascript" src="../js/Util.js"></script>
+<script type="text/javascript" src="../js/toast.js"></script>
+<script type="text/javascript" src="../js/loading.js"></script>
+<script type="text/javascript" src="../js/my/ins_customer.js"></script>
+<script type="text/javascript" src="../js/wechat.js"></script>
+<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+</body>
+
+</html>

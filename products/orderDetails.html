@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>保单详情</title>
+		<meta name="viewport" content="width=device-width,initial-scale=0.5, minimum-scale=0.5, maximum-scale=0.5, user-scalable=no"/>
+		<link rel="stylesheet" type="text/css" href="../css/reset.css">
+		<link rel="stylesheet" type="text/css" href="../css/orderDetails.css">
+		<script type="text/javascript" src="../js/rem.js"></script>
+		<script type="text/javascript" src="../js/jquery.min.js"></script>
+		<script type="text/javascript" src="../js/mobileapp.js"></script>
+	</head>
+	<body>
+		<div class="orderDetail nonclaim none" id="insuranceBIdetails">
+			<p class="orderSec bottom orderT">交强险信息</p>
+			<section class="orderSec">
+				<span>交强险保单号</span>
+				<span class="orderRight" id="insuranceBI"></span>
+			</section>
+			<section class="orderSec">
+				<span>车船税 &nbsp; &nbsp; &nbsp;代缴</span>
+				<span class="orderRight" id="chechuansui"></span>
+			</section>
+			<section class="orderSec">
+				<span>往年补缴金额</span>
+				<span class="orderRight" id="taxOverdue"></span>
+			</section>
+			<section class="orderSec">
+				<span>滞纳金</span>
+				<span class="orderRight" id="surCharge"></span>
+			</section>
+			<section class="orderSec">
+				<span>起保日期</span>
+				<span class="orderRight" id="insuranceSDateBI"></span>
+			</section>
+			<section class="orderSec">
+				<span>终保日期</span>
+				<span class="orderRight" id="insuranceEDateBI"></span>
+			</section>
+			<section class="orderSec top">
+				<span>保费合计</span>
+				<span class="orderRight" id="BIpremium"></span>
+			</section>
+		</div>
+		<div class="orderDetail nonclaim none" id="insuranceCIdetails">
+			<p class="orderSec bottom orderT">商业险信息</p>
+			<section class="orderSec">
+				<span>商业险保单号</span>
+				<span class="orderRight" id="insuranceCI"></span>
+			</section>
+			<section class="orderSec" id="insuranceDate">
+				<span>起保日期</span>
+				<span class="orderRight" id="insuranceSDateCI"></span>
+			</section>
+			<section class="orderSec">
+				<span>终保日期</span>
+				<span class="orderRight" id="insuranceEDateCI"></span>
+			</section>
+			<div id="others" class="others"></div>
+			<section class="orderSec top">
+				<span>保费合计</span>
+				<span class="orderRight" id="CIpremium"></span>
+			</section>
+		</div>
+		<div class="orderDetail nonclaim nonvehicle none">
+			<p class="orderSec bottom orderT">保单详情</p>
+			<section class="orderSec">
+				<span>保单号</span>
+				<span class="orderRight" id="cplyNo"></span>
+			</section>
+		</div>
+		<div class="orderDetail nonclaim nonvehicle none">
+			<p class="orderSec bottom orderT">产品信息</p>
+			<section class="orderSec">
+				<span>产品名称</span>
+				<span class="orderRight" id="cplyName"></span>
+			</section>
+			<section class="orderSec none">
+				<span>邮政编码</span>
+				<span class="orderRight" id="zipcode"></span>
+			</section>
+			<section class="orderSec none">
+				<span>房屋地址</span>
+				<span class="orderRight" id="cplyAddress"></span>
+			</section>
+			<hr />
+			<section class="orderSec" style="padding-top: .3rem;">
+				<span>起保日期</span>
+				<span class="orderRight" id="cplySDate"></span>
+			</section>
+			<section class="orderSec">
+				<span>终保日期</span>
+				<span class="orderRight" id="cplyEDate"></span>
+			</section>
+			<section class="orderSec">
+				<span>保险期限</span>
+				<span class="orderRight" id="cplyDateRange"></span>
+			</section>
+			<section class="orderSec">
+				<span>份数</span>
+				<span class="orderRight" id="count"></span>
+			</section>
+			<hr />
+			<section class="orderSec" style="padding-top: .3rem;">
+				<span>保障范围</span>
+				<span class="orderRight" id="range"></span>
+			</section>
+		</div>
+		<div class="orderDetail nonclaim nonvehicle none">
+			<section class="orderSec">
+				<span>总保额</span>
+				<span class="orderRight" id="baoe"></span>
+			</section>
+			<section class="orderSec">
+				<span>保费合计</span>
+				<span class="orderRight" id="totalPremium"></span>
+			</section>
+			<section class="orderSec">
+				<span>投保日期</span>
+				<span class="orderRight" id="cplyDate"></span>
+			</section>
+		</div>
+		<div class="orderDetail nonclaim none" id="carInfo">
+			<p class="orderSec bottom orderT">车辆信息</p>
+			<section class="orderSec">
+				<span>车牌</span>
+				<span class="orderRight" id="licenseNo"></span>
+			</section>
+			<section class="orderSec">
+				<span>车架号</span>
+				<span class="orderRight" id="vinNo"></span>
+			</section>
+			<section class="orderSec">
+				<span>品牌名称</span>
+				<span class="orderRight" id="brandCN"></span>
+			</section>
+			<section class="orderSec">
+				<span>发动机号</span>
+				<span class="orderRight" id="engineNo"></span>
+			</section>
+			<section class="orderSec">
+				<span>核定载客人数</span>
+				<span class="orderRight" id="ratedPassengerCapacity"></span>
+			</section>
+		</div>
+		<div class="orderDetail nonclaim none" id="carOwnerInfo">
+			<p class="orderSec bottom orderT">车主信息</p>
+			<section class="orderSec">
+				<span>姓名</span>
+				<span class="orderRight" id="carOwner"></span>
+			</section>
+			<section class="orderSec">
+				<span>电话</span>
+				<span class="orderRight" id="carOwnerTel"></span>
+			</section>
+			<section class="orderSec">
+				<span>证件号码</span>
+				<span class="orderRight" id="carOwnerNo"></span>
+			</section>
+			<section class="orderSec">
+				<span>地址</span>
+				<span class="orderRight" id="carOwnerAddr"></span>
+			</section>
+		</div>
+		<div id="insurancePersonHolder">
+			
+		</div>
+		<div class="orderDetail nonclaim both none" id="insurancePerson" style="display: none;">
+			<p class="orderSec bottom orderT">被保险人信息</p>
+			<section class="orderSec">
+				<span>姓名</span>
+				<span class="orderRight" id="insuredName"></span>
+			</section>
+			<section class="orderSec">
+				<span>电话</span>
+				<span class="orderRight" id="insuredcellphone"></span>
+			</section>
+			<section class="orderSec">
+				<span>证件号码</span>
+				<span class="orderRight" id="insuredcertNo"></span>
+			</section>
+			<section class="orderSec">
+				<span>地址</span>
+				<span class="orderRight" id="insuredAddress"></span>
+			</section>
+		</div>
+		<div class="orderDetail nonclaim both none">
+			<p class="orderSec bottom orderT">投保人信息</p>
+			<section class="orderSec">
+				<span>姓名</span>
+				<span class="orderRight" id="ownerName"></span>
+			</section>
+			<section class="orderSec">
+				<span>电话</span>
+				<span class="orderRight" id="ownercellphone"></span>
+			</section>
+			<section class="orderSec">
+				<span>证件号码</span>
+				<span class="orderRight" id="ownercertNo"></span>
+			</section>
+			<section class="orderSec vehicle">
+				<span>电子邮箱</span>
+				<span class="orderRight" id="ownerEmail"></span>
+			</section>
+			<section class="orderSec vehicle">
+				<span>地址</span>
+				<span class="orderRight" id="ownerAddress"></span>
+			</section>
+		</div>
+		<div class="orderDetail nonclaim both none">
+			<section id="premium" class="orderSec none">
+				<span>保费合计</span>
+				<span class="orderRight"></span>
+			</section>
+			<!--<section class="orderSec">
+				<span>特别约定</span>
+				<input type="text" class="orderRight" id="ownercellphone" readonly="readonly" value="">
+			</section>-->
+			<section class="orderSec">
+				<span>承保公司</span>
+				<span class="" id="ownercertNo">都邦财产保险股份有限公司</span>
+			</section>
+			<section class="orderSec">
+				<a id="download" class="btn-lg bg-color-d3a27c color-fff download none"  href="">电子保单下载</a>
+			</section>
+		</div>
+
+		<div class="orderDetail claim none">
+			<p class="orderSec bottom orderT">理赔信息</p>
+			<section class="orderSec">
+				<span>报案号</span>
+				<span class="orderRight" id="		caseno				"></span>
+			</section>
+			<section class="orderSec">
+				<span>保单号</span>
+				<span class="orderRight" id="		plyno				"></span>
+			</section>
+			<section class="orderSec">
+				<span>赔案号</span>
+				<span class="orderRight" id="		claimno				"></span>
+			</section>
+			<section class="orderSec vehicle">
+				<span>案件状态</span>
+				<span class="orderRight" id="		state				"></span>
+			</section>
+			<section class="orderSec vehicle">
+				<span>被保险人名称</span>
+				<span class="orderRight" id="		insurednameC		"></span>
+			</section>
+			<section class="orderSec vehicle">
+				<span>驾驶员名称</span>
+				<span class="orderRight" id="		drivername			"></span>
+			</section>
+			<section class="orderSec vehicle">
+				<span>车牌号</span>
+				<span class="orderRight" id="		lcnno				"></span>
+			</section>
+			<section class="orderSec vehicle">
+				<span>出险时间</span>
+				<span class="orderRight" id="		accidenttime		"></span>
+			</section>
+			<section class="orderSec vehicle">
+				<span>出险地点</span>
+				<span class="orderRight" id="		accidentaddr				"></span>
+			</section>
+			<section class="orderSec vehicle">
+				<span>出险原因</span>
+				<span class="orderRight" id="		accidentcourse				"></span>
+			</section>
+			<section class="orderSec vehicle">
+				<span>定损金额</span>
+				<span class="orderRight" id="		surveyamt				"></span>
+			</section>
+			<section class="orderSec vehicle">
+				<span>赔付金额</span>
+				<span class="orderRight" id="		claimamt				"></span>
+			</section>
+		</div>
+		<!-- <botton class="orderDetail claim" id="btn" onclick="window.open('ins_claim_evaluation.html')">理赔评价</botton> -->
+		<p class="tips">如有任何疑问，请致电客服热线：<a href="tel:95586">95586</a></p>
+	</body>
+	<script type="text/javascript" src="../js/Util.js"></script>
+	<script type="text/javascript" src="../js/orderDetails.js?v1"></script>
+	<script type="text/javascript" src="../js/wechat.js"></script>
+	<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+</html>

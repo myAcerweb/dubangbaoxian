@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>修改地址</title>
+		<link rel="stylesheet" href="../css/normalize.min.css">
+		<link rel="stylesheet" href="../css/reset.css">
+		<link rel="stylesheet" href="../css/products/ins_mail_address_set.css">
+		<link rel="stylesheet" href="../css/toast.css">
+		<link rel="stylesheet" href="../css/loading.css">
+		<link rel="stylesheet" type="text/css" href="../css/mui.picker.css" />
+	</head>
+
+	<body class="bg-color-f8f8f8">
+		<div class="g-item margin-top-30">
+			<item class="margin-left-30 font30">收件人姓名
+				<input id="name" type="text" placeholder="请输入用户名">
+			</item>
+			<item class="margin-left-30 font30 border-none">手机号
+				<input id="num" type="tel" placeholder="请输入手机号">
+			</item>
+		</div>
+		<div  class="margin-top-30 bg-color-fff">
+			<!--已经取消-->
+			<!--<item id="areaClick" class="margin-left-30 font30 relative">所在地区
+				<input id='showArea' class="rigb width40" type="text" placeholder="请选择所在地区" disabled="true"><img class="ver arrow right" src="../images/ico_arrow.png" />
+			</item>-->
+			<item class="border-none height200 font30 margin-left-30">
+				详细地址  <button id="showCityPicker">选择省市</button>
+				<textarea id="detailArea" class="textarea input-left" placeholder="请输入详细地址" name="name"></textarea>
+			</item>
+			<div id="insureArea"   class=" color-fff font34 commit" style="background-color:#d3a27c;text-align: center;line-height: 0.94rem;">确定</div>
+		</div>
+		
+		<script src="../js/setrem.js"></script>
+		<script src="../js/jquery-3.2.0.js"></script>
+		<script src="../js/loading.js"></script>
+		<script type="text/javascript" src="../js/toast.js"></script>
+		<script type="text/javascript" src="../js/mobileapp.js"></script>
+		<script type="text/javascript" src="../js/loading.js"></script>
+		<script type="text/javascript" src="../js/Util.js"></script>
+		<script type="text/javascript" src="../js/ins_vehicle.js"></script>
+		<script type="text/javascript" src="../js/data.city.js"></script>
+		<script type="text/javascript" src="../js/mui.min.js"></script>
+		<script type="text/javascript" src="../js/mui.picker.min.js"></script>
+		<script src="../js/products/ins_mail_address_set.js"></script>
+		<script type="text/javascript" src="../js/wechat.js"></script>
+		<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+	</body>
+
+</html>

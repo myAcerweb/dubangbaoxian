@@ -1,0 +1,103 @@
+.box {
+	height: .3rem;
+	width: 100%;
+}
+
+input {
+	height: .34rem;
+	padding: .33rem 0;
+	width: calc(100% - .92rem);
+	background-repeat: no-repeat;
+	background-position: left center;
+	border: 0;
+	padding-left: .62rem;
+	outline: none;
+	display: block;
+}
+
+.id-number {
+	background-image: url('../../images/ico_yuangonghao.png');
+	background-size: .3rem .3rem;
+	border-bottom: 1px solid #e0e0e0;
+}
+
+.pwd {
+	background-image: url('../../images/ico_yanzhengma.png');
+	background-size: .3rem .3rem;
+}
+
+.k {
+	position: relative;
+	height: 1.1rem;
+}
+
+.radio {
+	height: .28rem;
+	vertical-align: middle;
+}
+
+.validate {
+	position: absolute;
+	border: 1px solid #d3a27c;
+	outline: none;
+	display: block;
+	top: calc(50% - .34rem);
+	right: .3rem;
+	color: #d3a27c;
+	background-color: #fff;
+	width: auto;
+	height: .68rem;
+	padding: .2rem;
+}
+
+.other {
+	min-height: 10rem;
+	padding-top: .4rem;
+}
+
+.iagree {
+	display: block;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.commit {
+	border: none;
+	outline: none;
+}
+
+.people {
+	width: calc(33.33% - .4rem);
+	height: .88rem;
+	float: left;
+	list-style-type: none;
+	background-image: url('../../images/ico_bg_bdry.png');
+	background-repeat: no-repeat;
+	background-position: right;
+	background-size: 100% 100%;
+	position: relative;
+}
+
+.person {
+	height: .22rem;
+	position: absolute;
+	left: .2rem;
+	top: .14rem;
+}
+
+.name {
+    display: inline-block;
+    position: absolute;
+    left: .5rem;
+    top: .14rem;
+    width: calc(100% - .6rem);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.number {
+	position: absolute;
+	left: .2rem;
+	top: .42rem;
+}

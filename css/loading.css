@@ -1,0 +1,28 @@
+.pBg{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background-image: url(../images/loading_bg1.jpg);
+    background-repeat: no-repeat;
+    background-position: center 36%;
+    background-size: 4.7rem;
+}
+
+.cBg{
+	position: absolute;
+	top: calc(45% - .3rem);
+	left: calc(50% - .3rem);
+	width: .6rem;
+}
+.cBgg{
+	display: none;
+	position: absolute;
+	top: calc(51%);
+	left: calc(37% - .1rem);
+	font-size: .35rem;
+	color: #5c5c5c;
+}

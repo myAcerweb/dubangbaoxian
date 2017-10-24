@@ -1,0 +1,557 @@
+html, body {
+    height: 100%;
+    background-color: #f8f8f8
+}
+
+.tab {
+    width: 100%;
+    height: .88rem;
+    border-bottom: 1px solid #d8d8d8;
+}
+
+.tab li {
+    list-style-type: none;
+    float: left;
+    width: 50%;
+    height: .3rem;
+    margin: .29rem 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    text-align: center;
+    color: #757575;
+}
+
+.tab img {
+    width: .2rem;
+    padding-left: .1rem;
+}
+
+.box {
+    height: .4rem;
+    background-color: #f8f8f8;
+}
+
+.box-sm {
+    height: .2rem;
+    background-color: #f8f8f8;
+}
+
+.item {
+    background-color: #fff;
+    width: 100%;
+    padding-left: .3rem;
+    padding-bottom: .3rem;
+    box-sizing: border-box;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+    position: relative;
+    -webkit-box-shadow: 0 0 2px #fff;
+    box-shadow: 0 0 2px #fff;
+}
+
+.item .line {
+    position: relative;
+    width: 100%;
+}
+
+.state {
+    display: block;
+    position: relative;
+    height: .4rem;
+}
+
+.item-name {
+    display: inline-block;
+    height: .8rem;
+    line-height: .8rem;
+}
+
+.plate {
+    height: .32rem;
+    width: 1.6rem;
+    border-radius: 1rem;
+    background-color: rgba(53, 188, 249, .1);
+    color: rgb(53, 188, 249);
+    text-align: center;
+    line-height: .32rem;
+}
+
+.licenseNo {
+    position: absolute;
+    top: .25rem;
+    left: 1.79rem;
+}
+
+.fee {
+    position: absolute;
+    top: .3rem;
+    right: .83rem;
+}
+
+.line img {
+    position: absolute;
+    right: .3rem;
+    top: .25rem;
+    height: .32rem;
+}
+
+.createTime {
+    display: inline-block;
+    padding: .1rem 0;
+}
+
+.point {
+    position: absolute;
+    right: .83rem;
+    top: .1rem;
+}
+
+.line .ico_ji {
+    position: absolute;
+    top: .05rem;
+}
+
+.quotationNo {
+    font-family: PingFangSC-Regular;
+    display: inline-block;
+    width: calc(100% - 1.3rem);
+    font-size: .2rem;
+    letter-spacing: 0;
+    color: rgb(158, 158, 158);
+
+}
+.quotationNo p{
+    margin: 0;
+    /*height: .4rem;*/
+    line-height: .4rem;
+
+}
+.feiche {
+    margin-top: 0.2rem;
+    border-top: solid 1px #ececec;
+}
+
+.delete {
+    display: inline-block;
+    font-size: .28rem;
+    padding: .06rem .24rem;
+    vertical-align: text-bottom;
+}
+
+.item-sm {
+    height: 1.9rem;
+    width: calc(100% - .6rem);
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+    position: relative;
+}
+
+.item-sm img:nth-of-type(1) {
+    position: absolute;
+    left: .3rem;
+    top: 0;
+    height: .4rem;
+}
+
+.item-sm img:nth-of-type(2) {
+    position: absolute;
+    right: .3rem;
+    top: .7rem;
+    height: .32rem;
+}
+
+.item-sm img:nth-of-type(3) {
+    position: absolute;
+    right: .3rem;
+    bottom: .3rem;
+    height: .32rem;
+}
+
+.item-sm i:nth-of-type(1) {
+    position: absolute;
+    left: .3rem;
+    top: .7rem;
+}
+
+.item-sm i:nth-of-type(2) {
+    position: absolute;
+    left: 2.09rem;
+    top: .7rem;
+}
+
+.item-sm i:nth-of-type(3) {
+    position: absolute;
+    left: .3rem;
+    bottom: .3rem;
+}
+
+.item-sm i:nth-of-type(4) {
+    position: absolute;
+    right: .83rem;
+    bottom: .3rem;
+}
+
+.item-sm span:nth-of-type(1) {
+    position: absolute;
+    right: .83rem;
+    top: .7rem;
+}
+
+.search {
+    position: fixed;
+    right: .3rem;
+    bottom: .82rem;
+    width: 1.52rem;
+}
+
+/* 绑定保单 */
+
+.bddd {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    padding: 10% 10%;
+    background: rgba(0, 0, 0, .4);
+}
+
+.bdcentent {
+    width: 80%;
+    border-radius: .24rem;
+    height: 7.84rem;
+    background-color: #f8f8f8;
+    padding-bottom: .5rem
+}
+
+.color-666 {
+    color: #666;
+}
+
+.background-color-fff {
+    background-color: #fff;
+}
+
+.background-color-f8f8f8 {
+    background-color: #f8f8f8;
+}
+
+.header {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    background-color: #fff;
+    padding: .3rem;
+    width: 100%;
+    height: .94rem;
+    -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .1);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .1);
+    text-align: center;
+    border-top-left-radius: .24rem;
+    border-top-right-radius: .24rem;
+}
+
+.header i {
+    display: inline-block;
+}
+
+.font36 {
+    font-size: .36rem;
+    position: relative;
+    top: -.64rem;
+}
+
+.clear {
+    clear: both;
+}
+
+.btn {
+    width: calc(100% - .6rem);
+    height: .88rem;
+    border-radius: .12rem;
+    outline: none;
+    border: none;
+}
+
+.input {
+    width: calc(100% - .6rem);
+    height: .88rem;
+    border: none;
+    outline: none;
+    border-radius: .06rem;
+}
+
+.ib {
+    display: inline-block;
+}
+
+.money {
+    position: absolute;
+    left: .3rem;
+    top: 1.24rem;
+    z-index: 2;
+}
+
+.relative {
+    position: relative;
+}
+
+.margin-top-92 {
+    margin-top: .92rem;
+}
+
+.height-564 {
+    height: 5.64rem;
+}
+
+.jin {
+    position: absolute;
+    top: 1.24rem;
+    left: 2rem;
+}
+
+.ji {
+    position: absolute;
+    right: .3rem;
+    top: 1.24rem;
+}
+
+.jifen {
+    position: absolute;
+    top: 1.24rem;
+    right: .8rem;
+}
+
+/* downListState  */
+
+.states {
+    background-color: white;
+    position: relative;
+    width: 100%;
+    height: 9rem;
+    z-index: 3;
+}
+
+.states1 {
+    background-color: white;
+    position: relative;
+    width: 100%;
+    height: 3.02rem;
+    z-index: 3;
+}
+
+.lstate {
+    position: relative;
+    width: 100%;
+    height: .88rem;
+}
+
+.lstate a {
+    font-family: PingFangSC-Regular;
+    font-size: .28rem;
+    line-height: .28rem;
+    position: absolute;
+    top: .29rem;
+    left: .4rem;
+}
+
+.lstate img {
+    position: absolute;
+    top: .3rem;
+    right: .4rem;
+    width: .3rem;
+    height: .2rem;
+}
+
+.bba {
+    border-bottom: 1px solid rgba(224, 224, 224, .8);
+}
+
+.shortline {
+    width: calc(100% - .4rem);
+    margin-left: .4rem;
+}
+
+.shortline a {
+    left: 0;
+}
+
+/* setDate */
+
+.setDate {
+    position: relative;
+    width: 100%;
+    height: .88rem;
+}
+
+.setDate a {
+    position: absolute;
+    top: .3rem;
+    left: .4rem;
+    font-family: PingFangSC-Regular;
+    font-size: .28rem;
+    color: #757575;
+    line-height: .28rem;
+}
+
+.setDate i {
+    position: absolute;
+    right: .6rem;
+    top: .3rem;
+    font-family: PingFangSC-Regular;
+    font-size: .28rem;
+    color: #616161;
+    line-height: .28rem;
+}
+
+.setDate img {
+    position: absolute;
+    right: .3rem;
+    top: .3rem;
+    width: .14rem;
+    top: .26rem;
+}
+
+.setD button {
+    width: calc(50% - .45rem);
+    height: .7rem;
+}
+
+.setD {
+    position: relative;
+    height: 1.1rem;
+    -webkit-box-shadow: 0 0 .1rem rgba(0, 0, 0, .1);
+    box-shadow: 0 0 .1rem rgba(0, 0, 0, .1);
+}
+
+.setD button:nth-of-type(1) {
+    font-family: PingFangSC-Regular;
+    font-size: .34rem;
+    color: #D3A27C;
+    line-height: .34rem;
+    border: 2px solid #D3A27C;
+    border-radius: .08rem;
+    background-color: #fff;
+    position: absolute;
+    top: .2rem;
+}
+
+.setD button:nth-of-type(2) {
+    position: absolute;
+    right: .3rem;
+    top: .2rem;
+    font-family: PingFangSC-Regular;
+    font-size: .34rem;
+    color: #FFFFFF;
+    line-height: .34rem;
+    background: #D3A27C;
+    border-radius: .08rem;
+}
+
+.mui-scroll-wrapper {
+    top: .88rem;
+}
+
+.pay {
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    line-height: 100vh;
+    background-color: rgba(0, 0, 0, .4);
+    overflow: hidden;
+}
+
+.dw {
+    float: right;
+    margin-right: 0.46875rem;
+    margin-top: 0.4rem;
+}
+
+.contents {
+    width: 78%;
+    margin: 3.0796875rem auto;
+    border: none;
+    outline: none;
+    border-radius: .24rem;
+    position: relative;
+    -webkit-appearance: none;
+    background-color: rgb(255, 255, 255);
+    padding-bottom: .046875rem;
+}
+
+.pay-num {
+    padding: .15rem 0;
+    box-shadow: 0 0.02rem 0.02rem rgba(0, 0, 0, .1);
+}
+
+.cancel {
+    position: absolute;
+    top: .140625rem;
+    left: .140625rem;
+    line-height: .1875rem;
+}
+
+.span {
+    display: block;
+    line-height: 1;
+    font-size: .32rem;
+    text-align: center;
+}
+
+.pay-list {
+    display: block;
+    line-height: 2;
+    font-size: .32rem;
+    text-align: center;
+}
+
+.pay-style {
+    /*height: 3.75rem;*/
+    border-bottom: 1px solid #999;
+}
+
+.pay-style li {
+    list-style-type: none;
+    margin-left: .375rem;
+    line-height: 1.2656250000000002rem;
+    background-repeat: no-repeat;
+    background-position: 0 center;
+    padding-left: 0.9375rem;
+}
+
+.pay-style li:nth-of-type(1) {
+    background-image: url('../../images/ico_zhifu_wechat.png');
+}
+
+.pay-style li:nth-of-type(2) {
+    background-image: url('../../images/ico_zhifu_saoma.png');
+}
+
+.pay-style li:nth-of-type(3) {
+    background-image: url('../../images/ico_zhifu_tonglian.png');
+}
+
+.pay-style li:nth-of-type(4) {
+    background-image: url('../../images/ico_zhifu_tonglian.png');
+}
+
+.border-bottom {
+    border-bottom: 1px solid #ddd;
+}
+
+.now-pay {
+    position: relative;
+    display: block;
+    bottom: 0;
+    width: 80%;
+    margin: 0.1875rem 10%;
+    height: 0.75rem;
+    font-size: 0.32rem;
+    border-radius: .562 .5px;
+    border-top: rgba(0, 0, 0, .1);
+}
+
+.zhifu img {
+    /*width: .2.34375rem;*/
+    vertical-align: middle;
+}

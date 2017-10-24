@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>投保</title>
+    <link rel="stylesheet" href="../css/normalize.min.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/signature-pad.css"/>
+    <link rel="stylesheet" href="../css/products/ins_claim_place.css?v1">
+    <link rel="stylesheet" href="../css/loading.css">
+    <link rel="stylesheet" href="../css/toast.css">
+    <style>
+      input[type="date"]::-webkit-calendar-picker-indicator,
+      input[type="date"]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        -o-appearance: none;
+        appearance: none;
+        width: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+    <div id="address" class="font32 color-616161 user margin-left-30 border-bottom bold">
+     	 保单邮寄地址
+      <img class="arrow" src="../images/ico_arrow.png"/>
+    </div>
+    <div class="address">
+	    <li>
+	    	<div>
+	      	<i class="nowrap color-9e9e9e">姓名</i>
+	      	<i class="color-616161" id="reciver_name"></i>
+	    	</div>
+	    	<div>
+	     	  <i class="nowrap color-9e9e9e">电话</i>
+	        <i class="color-616161" id="reciver_cellphone"></i>
+	    	</div>
+	    </li>
+	    <li>
+	      <i class="nowrap color-9e9e9e">地址</i>
+	      <i class="padding-left-20" id="reciver_addr"></i>
+	    </li>
+  	</div>
+  <div class="box"></div>
+  <div id="vehicleOwner" class=" setMessage font32 color-616161 user master margin-left-30 bold">
+    车主信息
+    <img class="arrow" src="../images/ico_arrow.png"/>
+  </div>
+  <div class="address padding-right-30 border-bottom margin-left-30">
+    <li>
+      <i class=" left color-9e9e9e" id="owner_name"></i>
+      <i id="owner_cellphone" class="right bw"></i>
+    </li>
+  </div>
+  <div class="setMessage font32 color-616161 user middleman margin-left-30 bold">
+    投保人信息
+    <img id="toubaoren" class="user-check vehicleOwner" src="../images/ico_tongchezhu_pre.png"/>
+    <img class="arrow" src="../images/ico_arrow.png"/>
+  </div>
+  <div class="address padding-right-30 border-bottom margin-left-30">
+    <li>
+      <i class="left color-9e9e9e name1" id="buyer_name"></i>
+      <i class="right bw phone1" id="buyer_cellphone"></i>
+    </li>
+  </div>
+  <div class="setMessage font32 color-616161 user protected margin-left-30 bold">
+    被保人信息
+    <img id="beibaoren" class="user-check vehicleOwner" src="../images/ico_tongchezhu_pre.png"/>
+    <img class="arrow" src="../images/ico_arrow.png"/>
+  </div>
+  <div class="address padding-right-30 border-bottom bbr">
+    <li>
+      <i class="left color-9e9e9e name1" id="benifit_name"></i>
+      <i class="right phone1 bw" id="benifit_cellphon"></i>
+    </li>
+  </div>
+  <div class="box"></div>
+  <div class="font32 color-616161 user dubang margin-left-30 border-bottom bold">
+    都邦财产股份有限公司承保
+  </div>
+  <div class="font32 color-616161 user city margin-left-30 border-bottom bold">
+    投保城市
+    <i id="area" class="right padding-right-30 normal"></i>
+  </div>
+  <div id="jiaoqianxian" style="display: none;height: 3.3rem;" class="font32 color-616161 user xianzhong max-height margin-left-30 border-bottom bold margin-right-30">
+    交强险
+    <li class="time margin-right-fu30">
+      <i id="jiaoqiangjia" class="right color-ffa726 normal"></i>
+    </li>
+    <li class="style padding-top-10 margin-right-fu30" style="left: .5rem;">
+      <i class="left color-9e9e9e normal">车船税</i>
+      <i class="font32 margin-left-30 normal" style="display: inline-block;">代缴</i>
+      <i id="chechuansui" class="right padding-left-20 normal"></i>
+    </li>
+    <li class="style margin-right-fu30" style="top: 1.15rem;left: .5rem;"><i class="left color-9e9e9e normal">往年补缴金额</i>
+        <i id="taxOverdue" class="right padding-left-20 normal"></i>
+    </li>
+    <li class="style margin-right-fu30" style="top: 1.6rem;left: .5rem;"><i class="left color-9e9e9e normal">滞纳金</i>
+        <i id="surCharge" class="right padding-left-20 normal"></i>
+    </li>
+    <li class="padding-top-30 margin-right-fu30" style="padding-top: 1.05rem;">
+      <i class="font28 normal left color-9e9e9e">起保期</i>
+      <i id="jiaoqiri" class="right padding-left-30 normal font28 color-616161"></i>
+    </li>
+    <li class=" margin-right-fu30" style="padding-top: 1.5rem;">
+    		<i class="font28 normal left color-9e9e9e">终保期</i>
+        <i id="jqzb" class="right padding-left-30 normal font28 color-616161"></i>
+    </li>
+  </div>
+  <div id="shangyexian" style="display: none;height:1.9rem" class="font32 color-616161 user xianzhong syx margin-left-30 border-bottom bold">
+    商业险
+    <li class="time" style="left: .5rem;top: .63rem;float: left;">
+      <i class="font28 left  normal color-9e9e9e">起保期</i>
+      <i id="bi_start" style="float: left;" class="right padding-left-20 color-616161 normal"></i>
+    </li>
+    <li class="time" style="left: .5rem;top: 1.2rem;float: left;">
+      <i class="font28 left  normal color-9e9e9e">终保期</i>
+      <i id="syzb" style="float: left;" class="right padding-left-20 color-616161 normal"></i>
+    </li>
+  </div>
+  <div style="display: none;" class="information xiangqing">
+    <li class="font28 xianzhongming">
+      <span id="name"></span><img style="display: none;" class="left bujimianpei" src="../images/ico_bujimianpei.png" alt="">
+      <i class="right chebaoe">
+        ￥</i>
+      <i class="right chebaojia">￥</i>
+    </li>
+    <br style="clear: both">
+    <!-- 不太明确高度的情况下，高度设置成auto ,防止有浏览器不兼容 添加一个:both 如上 -->
+  </div>
+  <div id="bg" style="display: none;" class="bg"></div>
+  <div class="box"></div>
+  <div id="extfee_holder" class="font32 color-616161 user total margin-left-30 border-top bold" style="background-image: url('../images/ico_cheliangxinxi.png');">
+    驾乘添逸
+    <i id="extfee" class="right padding-right-30 normal color-ffa726"></i>
+  </div>
+  <div class="font32 color-616161 user total margin-left-30 border-top bold">
+    总额
+    <i id="zhonge" class="right padding-right-30 normal color-ffa726"></i>
+  </div>
+  <div class="box"></div>
+  <div class="font32 color-616161 for-message margin-left-30 border-bottom bold">
+    车辆信息
+  </div>
+  <div class="carMessage border-bottom">
+    <li class="font28">车牌号码<i id="plate"></i>
+    </li>
+    <li class="font28">品牌型号<i id="model"></i>
+    </li>
+    <li class="font28">车辆识别码<i id="chejiahao"></i>
+    </li>
+    <li class="font28">发动机号<i id="vehicleEngine"></i>
+    </li>
+    <li class="font28">车辆初登日期<i id="enrollDate"></i>
+    </li>
+  </div>
+  <div class="serve color-fff padding-left-30 padding-right-30 border-top i1 font24 color-000">
+    <img id="checked" src="../images/ico_radio——normal.png"/>
+    <p style="word-wrap: break-word;line-height: .49rem;position: absolute;margin: 0;width: 60%;">
+      <span>已经阅读并同意</span>
+      <a href="交强险条款.htm" style="text-decoration: none;">
+        <i class="i2 font24 color-d3a27c">《交强险条款》</i>
+      </a>、
+      <a href="机动车综合商业保险条款.htm" style="text-decoration: none;">
+        <i class="i2 font24 color-d3a27c">《机动车综合商业保险条款》</i>
+      </a>
+    </p>
+    <!--<button class="autograph color-d3a27c font24" id="sign_btn">签字</button>-->
+  </div>
+  <div id="signature-pad" style="display: none;" class="m-signature-pad" style="height: 500px;background: yellowgreen;">
+    <div class="m-signature-pad--body">
+      <canvas style="position:fixed; width:100vw; height: 100vh; z-index: 998"></canvas>
+    </div>
+    <div class="m-signature-pad--footer">
+      <button type="button" class="button clear" data-action="clear">Clear</button>
+      <button type="button" class="button save" data-action="save">Save</button>
+    </div>
+  </div>
+  <footer>
+    <div class="border-top" style="position: relative;">
+      <i class="font24 ii1">实付</i>
+      <i id="shifujia" class="ii2 font46 color-d3a27c"></i>
+      <div id="now-pay" style="position:absolute;background-color: #bdbdbd;" class="toubao color-fff font34">投保</div>
+    </div>
+  </footer>
+  <section id="zhifuye" class="pay none">
+    <div class="content">
+      <div class="pay-num">
+        <!--<i class="cancel font30 color-999">取消</i>-->
+        <!--<span id="jine" class="span color-212121"></span>-->
+        <i class="font24 pay-list color-666">请选择支付方式</i>
+      </div>
+      <div class="pay-style">
+        <li class="zhifu we-sao font30 border-bottom">微信扫码支付
+          <img class="dw" src="../images/ico_select_normal.png" alt=""/></li>
+        <!--<li class="we font30 border-bottom">微信支付</li>-->
+        <li class="zhifu lt font30 border-bottom">通联支付<img class="dw" src="../images/ico_select_normal.png" alt=""/>
+        </li>
+        <li class="zhifu pos font30 border-bottom">POS支付<img class="dw" src="../images/ico_select_normal.png" alt=""/></li>
+        <li class="zhifu we-liji font30">微信立即支付
+					<img class="dw" src="../images/ico_select_normal.png" alt=""/>
+				</li>
+      </div>
+      <div class="now-pay">
+      	<button id="lijizhifu" class="bg-color-d3a27c color-fff font34">立即付款</button>
+      </div>
+    </div>
+  </section>
+  <section class="pay none">
+    <div class="content">
+      <div class="pay-num">
+        <i class="cancel font30 color-999">取消</i>
+        <span class="span color-212121">￥
+        </span>
+        <i class="font24 pay-list color-666">请选择支付方式</i>
+      </div>
+      <div class="pay-style"></div>
+    </div>
+  </section>
+  <!--<iframe id="signature_pad" src="signature_pad.html" width="100%" height="100%" class="none" style="position:absolute;left:0;top:0;z-index:9;background-color:#fff;border:none;"></iframe>-->
+  <script src="../js/setrem.js"></script>
+</body>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script type="text/javascript" src="../js/Util.js"></script>
+<script src="../js/jquery-3.2.0.js"></script>
+<script src="../js/loading.js"></script>
+<script type="text/javascript" src="../js/toast.js"></script>
+<script src="../js/mobileapp.js"></script>
+<script src="../js/ins_vehicle.js"></script>
+<script src="../js/toast.js"></script>
+<script type="text/javascript" src="../js/signature_pad.js"></script>
+<script type="text/javascript" src="../js/products/ins_claim_place.js"></script>
+<script type="text/javascript" src="../js/wechat.js"></script>
+<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+ 
+</html>

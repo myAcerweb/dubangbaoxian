@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>个人代理认证</title>
+		<link rel="stylesheet" href="../css/normalize.min.css">
+		<link rel="stylesheet" href="../css/reset.css">
+		<link rel="stylesheet" href="../css/my/ins_employee_confirm.css">
+		<link rel="stylesheet" href="../css/loading.css">
+		<link rel="stylesheet" href="../css/toast.css">
+	</head>
+	<body>
+		<div class="box bg-color-f5f5f5"></div>
+		<input class="id-number margin-left-30 font34" type="number" id="agreementcode" placeholder="请输入代理协议号">
+		<!--<div class="k">
+			<input class="pwd margin-left-30 font34" type="number" placeholder="请输入验证码" id="checkcode">
+			<button class="validate font24" id="checkcode_btn">获取验证码</button>
+		</div>-->
+		<section class="other bg-color-f5f5f5">
+			<!--<div class="iagree font28">
+				<img class="radio" src="../images/ico_weixuan.png" id="IsPromise"/>
+				已阅读并同意
+				<i class="normal color-d3a27c">《承诺书》</i>
+			</div>-->
+			<button style="-webkit-transform: translate3d(0,0,0)" class="commit bg-color-d3a27c btn-lg bg-color-bdbdbd color-fff font34 " id="search_btn">确定</button>
+			<i class="normal font24 color-d3a27c margin-left-30 margin-top-140">已绑代理</i>
+			<section class="margin-top-20">
+				<div id="bind_list">
+				<li class="people margin-left-30" id="tempext" style="display: none;">
+					<img class="person" src="../images/ico_person.png"/>
+					<i class="normal font22 name">张子凡</i>
+					<i class="normal font28 number">13213112</i>
+				</li>
+			</div>
+		</section>
+	</section>
+	<script type="text/javascript" src="../js/mobileapp.js"></script>
+	<script type="text/javascript" src="../js/jquery-3.2.0.js"></script>
+	<script src="../js/setrem.js"></script>
+	<script type="text/javascript" src="../js/loading.js"></script>
+	<script type="text/javascript" src="../js/toast.js"></script>
+	<script type="text/javascript" src="../js/Util.js"></script>
+	<script type="text/javascript" src="../js/wechat.js"></script>
+	<script type="text/javascript" src="../js/my/ins_agent_confirm.js"></script>
+	<script type="text/javascript" src="../js/zepto.min.js"></script>
+	   <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+ 
+	<script type="text/javascript">
+//		var imgSrc = ['../images/ico_weixuan.png', '../images/ico_xuanzhong.png'];
+//		document.getElementsByClassName('radio').src = document.getElementsByClassName('radio') == imgSrc[0]
+//			? imgSrc[1]
+//			: imgSrc[0];
+	</script>
+</body>
+</html>

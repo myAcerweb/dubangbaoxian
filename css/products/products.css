@@ -1,0 +1,260 @@
+html{
+	line-height: 1;
+}
+.rowLeft, .style {
+    -webkit-box-sizing: border-box
+}
+
+.font28, .rowRightS, .start {
+    font-style: normal
+}
+
+body {
+    background-color: #f5f5f5
+}
+
+.banner {
+    width: 100%;
+    height: 3.4rem
+}
+
+.style {
+    height: 1.88rem;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: .1rem 0;
+    background-color: #fff
+}
+
+.style div {
+    width: 25%;
+    height: 1.88rem;
+    float: left;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    display: -webkit-flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    text-align: center;
+    /* padding: .43rem 0; */
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center
+}
+
+.font28 {
+    font-family: PingFangSC-Regular;
+    font-size: .28rem;
+    color: #212121;
+    line-height: .48rem
+}
+
+.icoLogo {
+    width: .68rem;
+    height: .68rem;
+    margin: 0 auto .2rem
+}
+
+.active {
+    border-bottom: .03rem solid #D3A27C
+}
+
+.insureStyle {
+    position: relative;
+    height: 4.14rem;
+    background-image: url(../../images/pic_yiwailvxing.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-color: rgba(0, 0, 0, .5);
+    margin-top: .1rem;
+}
+
+.bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    /*background-color: rgba(0, 0, 0, .3);*/
+    width: 100%;
+    height: 4.14rem;
+}
+
+.bg .image {
+    position: absolute;
+    left: 82%;
+    top: -.05rem;
+    width: 1.1rem;
+}
+.bg p:nth-of-type(1) span,.bg p:nth-of-type(2) span,.bg p:nth-of-type(3) span,.bg p:nth-of-type(4) span,.jine span{
+   padding-left:0.3rem;
+   padding-right:0.3rem;
+}
+.bg p:nth-of-type(1) {
+    font-family: PingFangSC-Medium;
+    font-size: .54rem;
+    color: #FFF;
+    line-height: 1.2rem;
+    margin-left: .3rem;
+    margin-top: .65rem;
+    margin-bottom: 0;
+}
+
+.bg p:nth-of-type(2) {
+    font-family: PingFangSC-Regular;
+    font-size: .28rem;
+    color: #FFF;
+    line-height: .28rem;
+    margin-left: .3rem;
+    margin-top: 0rem;
+    margin-bottom: .15rem;
+}
+
+.bg p:nth-of-type(3) span{
+	display: inline-block;
+}
+.bg p:nth-of-type(4) {
+    font-family: PingFangSC-Regular;
+    font-size: .28rem;
+    color: #FFF;
+    line-height: .28rem;
+    margin-left: .3rem;
+    margin-top: 0rem;
+    margin-bottom: .15rem;
+
+}
+
+.jine {
+    font-family: HelveticaNeue-Medium;
+    font-size: .8rem;
+    color: #fff;
+   /* line-height: .1rem;*/
+    margin-left: .3rem;
+  /*  display: inherit;*/
+    margin-top: 0;
+    margin-bottom: .2rem;
+}
+
+.rowRight p:nth-of-type(1), .start {
+    font-size: .32rem;
+    line-height: .3rem
+}
+
+.start {
+    font-family: PingFangSC-Regular;
+    color: #FFF;
+    font-size: 0.3rem;
+    margin-left: .1rem;
+}
+
+.deposit_price {
+    font-size: .3rem;
+    text-decoration: line-through solid #fff;
+    padding-right: .1rem;}
+
+.rowStyle {
+    margin-top: .1rem;
+    background-color: rgb(255, 255, 255);
+    min-height: 2.2rem;
+    overflow: auto
+}
+
+.rowLeft {
+    width: 40%;
+    height: 2.2rem;
+    float: left;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+.rowRight {
+    width: 60%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    float: left;
+    padding-left: .3rem
+}
+
+.rowRight p:nth-of-type(1) {
+    font-family: PingFangSC-Medium;
+    color: #212121
+}
+
+.rowRight p:nth-of-type(2) {
+    font-family: PingFangSC-Regular;
+    font-size: .24rem;
+    color: #959595;
+    line-height: .24rem
+}
+
+.rowRightE {
+    font-family: HelveticaNeue-Medium;
+    font-size: .4rem;
+    color: #d3a27c;
+    line-height: .4rem;
+    margin-top: .5rem;
+    display: inherit
+}
+
+.rowRightS {
+    font-family: PingFangSC-Regular;
+    font-size: .2rem;
+    color: #212121;
+    line-height: .2rem
+}
+
+/* 轮播图 */
+
+.swiper-container {
+    width: 100%;
+    height: 3.4rem
+}
+
+.swiper-pagination-bullet {
+    width: .12rem;
+    height: .12rem;
+    display: inline-block;
+    border-radius: 1rem;
+    background: rgb(255, 255, 255);
+    opacity: .3
+}
+
+.swiper-pagination-bullet-active {
+    width: .12rem;
+    height: .12rem;
+    opacity: .8;
+    background: rgb(255, 255, 255)
+}
+
+.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: -.03rem .08rem
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 3.4rem
+}
+
+/* 轮播图 */
+
+.activeColor {
+    color: #d3a27c;
+}
+
+.floating .logo {
+    display: block;
+    width: .94rem;
+    height: .94rem;
+    border-radius: 50%;
+    position: absolute;
+    top: -0.45rem;
+    left: calc(50% - .47rem);
+    background: url(../../images/icon_g.png) no-repeat center #fff;
+    background-size: .74rem;
+}
+
+.floating .ttoast-btn {
+    width: 100%;
+}

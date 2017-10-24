@@ -1,0 +1,38 @@
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    padding-top: .3rem;
+}
+
+section {
+    width: 100%;
+    height: auto;
+}
+
+.font44 {
+    font-size: .44rem;
+}
+
+.item {
+    height: 1.4rem;
+    width: calc(100% - .3rem);
+    margin-left: .3rem;
+    border-bottom: 1px solid #f5f5f5;
+}
+.span{
+	display: block;
+	height: .44rem;
+}
+.color-6bb95f {
+    color: #6bb95f;
+}
+.color-212121{
+	color: #212121;
+}
+.color-ef5350{
+	color: #ef5330;
+}

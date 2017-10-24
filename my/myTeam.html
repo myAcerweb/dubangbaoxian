@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<link rel="stylesheet" type="text/css" href="../css/mui.min.css">
+		<link rel="stylesheet" href="../css/normalize.min.css">
+		<link rel="stylesheet" href="../css/my/myTeam.css">
+		<title>我的团队</title>
+	</head>
+
+	<body>
+		<header>
+			<div>本周</div>
+			<div class="active">本月</div>
+			<div>本年</div>
+		</header>
+		<!--下拉刷新容器-->
+		<div id="refreshContainer" class="mui-content mui-scroll-wrapper" style="top: .88rem">
+			<div class="mui-scroll">
+				<!--数据列表-->
+				<div class="mui-table-view mui-table-view-chevron">
+					<div id="items"></div>
+					<div id="members"></div>
+				</div>
+			</div>
+		</div>
+		<div class="item" id="item" style="display: none;">
+			<div class="qian">
+				<i>总保费(元)</i>
+				<i class="free">213.00</i>
+				<img src="../images/ico_jibi.png" />
+			</div>
+			<div class="message">
+				<div class="tcy br">
+					<i>团成员</i>
+					<i class="groupNum">10</i>
+				</div>
+				<div class="ybf br">
+					<i>月保费</i>
+					<i class="premium">10.6</i>
+				</div>
+				<div class="ybd">
+					<i>月保单</i>
+					<i class="ordersNum">11</i>
+				</div>
+			</div>
+		</div>
+		<div class="member" id="member" style="display: none;">
+			<p>
+				<img src="../images/ico_addlocation.png" alt="" />
+				<span class="name">yuejfidhfa</span>
+			</p>
+			<p class="right">
+				<span class="fee">总保费</span><br />
+				<span class="order">总保单</span><br />
+				<span class="carfee">车船税</span>
+			</p>
+		</div>
+		<script src="../js/setrem.js"></script>
+		<script type="text/javascript" src="../js/jquery.min.js"></script>
+		<script type="text/javascript" src="../js/mobileapp.js"></script>
+		<script type="text/javascript" src="../js/mui.min.js"></script>
+		<script type="text/javascript" src="../js/Util.js"></script>
+		<script type="text/javascript" src="../js/my/myTeam.js"></script>
+		<script type="text/javascript" src="../js/wechat.js"></script>
+		<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+	</body>
+
+</html>

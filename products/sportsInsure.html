@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=0.5, minimum-scale=0.5, maximum-scale=0.5, user-scalable=no"/>
+    <link rel="stylesheet" type="text/css" href="../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../css/swiper.min.css">
+    <link rel="stylesheet" href="../css/loading.css">
+    <link rel="stylesheet" href="../css/toast.css">
+    <link rel="stylesheet" type="text/css" href="../css/mui.picker.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/products/ins_zhidingdiqu.css">
+    <link rel="stylesheet" type="text/css" href="../css/sportsInsure.css">
+</head>
+<body>
+<div class="wrapper">
+    <div class="swiper-container">
+        <div class="swiper-wrapper"></div>
+        <div class="masking">
+            <p id="productName" class="productName"></p>
+            <p id="productOth" class="productOth"></p>
+            <p id="productNum" class="productNum">已售<span></span>份</p>
+        </div>
+    </div>
+    <div class="descrip">
+        <div id="description" class="description"></div>
+        <!--<a href="" id="descripMore">查看更多特色</a>-->
+    </div>
+    <div class="products">
+        <section class="kind"></section>
+        <div class="products_container">
+            <div class="swiper-wrapper"></div>
+            <button style="display: none;background-color: transparent" id="descripdeep">展开</button>
+        </div>
+        <div class="Indate">
+            <section class="section">
+                <span>起保日期</span>
+                <input type="date"
+                       style="-webkit-appearance: none;background-color: #fff;border: none;outline: none;text-align:right; width: 2.4rem;"
+                       class="content" id="insuredDate">
+                <img class="arrow" src="../images/ico_aorrw.png"/>
+            </section>
+            <section class="section">
+                <span>保险期限</span>
+                <select class="mui-input" id="insuredTlimt" style="width: auto;"></select>
+                <img class="arrow" src="../images/ico_aorrw.png"/>
+            </section>
+            <section class="section">
+                <span>份数</span>
+                <select class="mui-input" id="insuredNum"></select>
+                <img class="arrow" src="../images/ico_aorrw.png"/>
+            </section>
+            <section id="insuranceCondition" class="section none">
+                <span>购买条件</span>
+                <input type="text" style="" class="content" disabled="disabled">
+            </section>
+        </div>
+    </div>
+    <div class="Insuretype Indate" style="display: none;">
+        <section class="section">
+            <span>车牌</span>
+            <input type="text" value="" class="content" id="carlicenseNo" placeholder="请填写车牌" maxlength="8"/>
+        </section>
+        <section class="section">
+            <span>车架号</span>
+            <input type="text" value="" class="content" id="carframeNo" placeholder="请填写车架号" maxlength="17"
+                   style="text-transform: uppercase;padding-right: 15px;"/>
+        </section>
+        <section class="section">
+            <span>发动机号</span>
+            <input type="text" value="" class="content" id="carengineNo" placeholder="请填写发动机号" maxlength="20"
+                   style="text-transform: uppercase;"/>
+        </section>
+        <section class="section">
+            <span>品牌名称</span>
+            <input type="text" value="" class="content" id="carbrandName" placeholder="请填写品牌名称"/>
+        </section>
+        <section class="section">
+            <span>车辆使用性质</span>
+            <select class="content" id="useNature">
+                <option value="7">非运营</option>
+            </select>
+        </section>
+        <section class="section">
+            <span>座位数</span>
+            <select class="content" id="carseatCount">
+                <option value="4">4座</option>
+                <option value="5" selected="selected">5座</option>
+                <option value="6" >6座</option>
+                <option value="7">7座</option>
+            </select>
+        </section>
+    </div>
+    <div class="InsureAddress Indate" style="display: none; background-color: transparent;">
+        <section class="section">
+            <span style="flex: 1;-webkit-flex: 1;">邮政编码</span>
+            <input type="number" max="6" value="" class="content" id="zipcode" placeholder="请填写邮政编码"/>
+        </section>
+        <section class="section" id="CityPicker">
+            <span style="flex: 1;-webkit-flex: 1;">房屋所在省市</span>
+            <button class="content" id="showCityPicker">选择省市</button>
+            <input type="hidden" id="provCode" value=""/>
+            <input type="hidden" id="cityCode" value=""/>
+            <img style="height: .1875rem;margin-left: .25rem;" src="../images/ico_aorrw.png"/>
+        </section>
+        <section class="section">
+            <span style="flex: 1;-webkit-flex: 1;">房屋详细地址</span>
+            <!--<div class="content" contenteditable="true"><br /></div>-->
+            <textarea value="" class="content" id="address" placeholder="请填写房屋详细地址"></textarea>
+        </section>
+        <p class="font26 padding-left-30" style="position: relative;top: .15rem;">房屋地址需明确到门牌号且应与房产证或购房合同中的一致</p>
+    </div>
+    <div class="Insured">
+        <section class="section">
+            <span>投保人</span>
+            <input type="text" class="owner mui-input" id="owner" value="" readonly="readonly" placeholder="请输入投保人信息">
+            <img class="arrow" src="../images/ico_aorrw.png"/>
+        </section>
+        <ul id="beInsured">
+            <li class="section beInsuredItem">
+                <span>
+                    <button class="delBeInsured none"></button>
+                    <span>被保险人</span>
+                    <img class="sameflag" id="beInsuredflag" src="../images/ico_tongtoubaoren_normal.png"/>
+                </span>
+                <input type="text" id="insured" class="beInsured mui-input" value="" readonly="readonly"
+                       placeholder="请输入被投保人信息">
+                <img class="arrow" src="../images/ico_aorrw.png"/>
+            </li>
+        </ul>
+        <p id="addBeInsured" class="font26 padding-left-30 addBeInsured"
+           style="position: relative;margin: .15rem 0; display: none">
+            <img src="../images/add.png" alt=""/> 添加被保险人
+        </p>
+        <p id="Benefit" class="font26 padding-left-30" style="position: relative;margin: .15rem 0;">
+            受益人：法定受益人</p>
+    </div>
+    <div id="tabs" class="tabs">
+        <span class="notice_image" tag="#notice_image">投保须知</span>
+        <span class="speAgreement_image" tag="#speAgreement_image">特别约定</span>
+        <span class="statement_image" tag="#statement_image">投保声明</span>
+        <span class="claim_image" tag="#claim_image">理赔流程</span>
+    </div>
+    <div class="tabContent">
+        <img class="notice_image none" id="notice_image" src="" alt=""/>
+        <img class="speAgreement_image none" id="speAgreement_image" src="" alt=""/>
+        <img class="statement_image none" id="statement_image" src="" alt=""/>
+        <img class="claim_image none" id="claim_image" src="" alt=""/>
+    </div>
+    <section id="zhifuye" class="pay none">
+        <div class="contents">
+            <div class="pay-num">
+                <!--<i class="cancel font30 color-999">取消</i>-->
+                <!--<span id="jine" class="span color-212121"></span>-->
+                <i class="font24 pay-list color-666">请选择支付方式</i>
+            </div>
+            <div class="pay-style">
+                <li class="zhifu we-sao font30 border-bottom">微信扫码支付
+                    <img class="dw" src="../images/ico_select_normal.png" alt=""/>
+                </li>
+                <!--<li class="we font30 border-bottom">微信支付</li>-->
+                <li class="zhifu lt font30 border-bottom">通联支付
+                    <img class="dw" src="../images/ico_select_normal.png" alt=""/>
+                </li>
+                <li class="zhifu we-liji font30 border-bottom">微信立即支付
+                    <img class="dw" src="../images/ico_select_normal.png" alt=""/>
+                </li>
+                <!-- <li class="zhifu pos font30">POS支付<img class="dw" src="../images/ico_select_normal.png" alt=""/></li> -->
+            </div>
+            <button id="lijizhifu" class="bg-color-d3a27c color-fff font34 now-pay">立即付款</button>
+        </div>
+    </section>
+    <p class="tips font24 padding-left-30 padding-top-10">
+        本投保人确认我公司偿付能力信息：截止2017年2季度，我公司综合偿付能力充足率为<i id="reimRate"></i>%，满足监管要求；我公司最近一期的风险综合评级结果为<i id="result"></i>类。
+</div>
+<footer>
+    <div class="item">
+        <input type="checkbox" id="article">
+        <i>
+            本人承诺投保信息的真实性，理解并同意
+            <span class="notice_image none">《投保须知》</span>
+            <span class="statement_image none">《投保声明》</span>
+            <span class="speAgreement_image none">《特别约定》</span>
+            <a href="" id="provisions" style="color: #D3A27C;">《保险条款》</a>的全部内容。
+        </i>
+        <!-- <div id="sign">签字</div> -->
+    </div>
+    <div class="allPay">实付:<span id="sumPremium">￥0.0</span>
+    </div>
+    <div class="gpBtn">立即支付</div>
+    <div class="clearStorage">清空数据</div>
+</footer>
+
+<section id="chooseDialog" class="chooseDialog">
+    <div class="dialogContent bg-color-fff">
+        <header class="font32 color-666">请选择出单员</header>
+        <ul id="userlist" class="lists font30 border-bottom">
+            <li id="userItem" class="border-bottom none">
+                <span class="name">214194</span>
+                <input type="hidden" class="userCode"/>
+                <input type="hidden" class="comCode"/>
+                <input type="hidden" class="areaCode"/>
+                <!--<input type="hidden" class="packageType"/>-->
+                <!--<input type="hidden" class="packageCode"/>-->
+                <input class="selected" id="_1" name="user" type="radio" style="display: none;"/>
+                <label for="_1" class="select"></label>
+            </li>
+        </ul>
+        <button id="selectUser" class="bg-color-d3a27c color-fff font34">确 定</button>
+    </div>
+</section>
+
+<section class="tbgg floating" id="floating" style="display: none;">
+    <div class="tcontent">
+        <span class="logo"></span>
+        <p class="ttoast-text">请关注都邦保险微信公众号</p>
+        <button id="btn" class="ttoast-btn">确定</button>
+    </div>
+</section>
+</body>
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/mobileapp.js"></script>
+<script type="text/javascript" src="../js/swiper.jquery.min.js"></script>
+<script type="text/javascript" src="../js/setrem.js"></script>
+<script type="text/javascript" src="../js/Util.js"></script>
+<script type="text/javascript" src="../js/wechat.js"></script>
+<script type="text/javascript" src="../js/toast.js"></script>
+<script type="text/javascript" src="../js/loading.js"></script>
+<script type="text/javascript" src="../js/mui.min.js"></script>
+<script type="text/javascript" src="../js/mui.picker.min.js"></script>
+<script src="../js/ins_vehicle.js"></script>
+<script type="text/javascript" src="../js/sportsInsure.js?v1"></script>
+<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+
+</html>

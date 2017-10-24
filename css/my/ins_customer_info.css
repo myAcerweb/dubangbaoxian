@@ -1,0 +1,62 @@
+p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f8f8f8
+}
+
+.panel {
+    width: calc(100% - .6rem);
+    margin: .2rem auto;
+    box-shadow: 0 0 20px 0 #E0E2E2;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.panel-top {
+    background: url(../../images/pic_panelTop.png) no-repeat center;
+    background-size: 100% 100%;
+    line-height: .85rem;
+    margin: 0;
+    padding: 0 .3rem;
+}
+
+.panel-content {
+    background: url(../../images/pic_panelContent.png) no-repeat left top #fff;
+    background-size: 100% auto;
+    padding: 0 .3rem;
+}
+
+.line {
+    position: relative;
+    font-size: 0;
+}
+
+.line-left, .line-right {
+    display: inline-block;
+    width: 50%;
+}
+
+.price {
+    position: absolute;
+    top: 50%;
+    bottom: 0;
+    right: 0;
+}
+
+.label {
+    display: block;
+    font-family: PingFangSC-Regular;
+    line-height: .84rem;
+}
+
+.value {
+    display: block;
+    margin: 0;
+}
+
+.cplyNo {
+    margin-top: -0.1rem;
+}

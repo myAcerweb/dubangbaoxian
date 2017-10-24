@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>订单</title>
+		<link rel="stylesheet" href="../css/normalize.min.css">
+		<link rel="stylesheet" href="../css/reset.css">
+		<link rel="stylesheet" type="text/css" href="../css/mui.min.css">
+		<link rel="stylesheet" href="../css/my/ins_order_list.css">
+		<link rel="stylesheet" href="../css/loading.css">
+		<link rel="stylesheet" href="../css/toast.css">
+		<style>
+			input {
+				-webkit-appearance: none;
+				background-color: #fff;
+				border: none;
+				outline: none;
+				width: 50%;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="tab slideTxtBox hd">
+			<li class="font30" id="static">状态<img id="ico_down" src="../images/ico_down.png" /></li>
+			<li style="border-left: 1px solid #d8d8d8;" class="font30" id="datee">日期<img id="ico_up" src="../images/ico_down.png" /></li>
+		</header>
+		<div class="states none" id="selectt">
+			<div id="qbb" class="lstate color-d3a27c">
+				<a>全部</a>
+				<img id="qb" src="../images/ico_ok.png" class="yc_img" />
+			</div>
+			<div id="bjzz" class="lstate bba color-757575">
+				<a>报价中</a>
+				<img id="bjz" src="../images/ico_ok.png" class="none yc_img" />
+			</div>
+			<div id="dhbb" class="lstate shortline bba color-757575">
+				<a>待核保</a>
+				<img id="dhb" src="../images/ico_ok.png" class="none yc_img" />
+			</div>
+			<div id="dzff" class="lstate shortline bba color-757575">
+				<a>待支付</a>
+				<img id="dzf" src="../images/ico_ok.png" class="none yc_img" />
+			</div>
+			<div id="zfsbb" class="lstate shortline bba color-757575">
+				<a>支付失败</a>
+				<img id="zfsb" src="../images/ico_ok.png" class="none yc_img" />
+			</div>
+			<div id="yzff" class="lstate shortline bba color-757575">
+				<a>已支付</a>
+				<img id="yzf" src="../images/ico_ok.png" class="none yc_img" />
+			</div>
+			<div id="ywcc" class="lstate bba color-757575">
+				<a>保单落地成功</a>
+				<img id="ywc" src="../images/ico_ok.png" class="none yc_img" />
+			</div>
+			<div id="ldisbb" class="lstate bba color-757575">
+				<a>保单落地失败</a>
+				<img id="ldisb" src="../images/ico_ok.png" class="none yc_img" />
+			</div>
+			<div id="hbsb_l" class="lstate bba color-757575">
+				<a>核保失败</a>
+				<img id="hbsb" src="../images/ico_ok.png" class="none yc_img" />
+			</div>
+			<div id="xfxgg" class="lstate bba color-757575">
+				<a>下发修改</a>
+				<img id="xfxg" src="../images/ico_ok.png" class="none yc_img" />
+			</div>
+
+		</div>
+		<div id="whileDate" class="states1 none">
+			<div class="setDate bba">
+				<a>开始日期</a>
+				<input id="sDatee" class="font26 normal" type="date" value="" style="position: absolute;width: 30%;height: .88rem;right: 0;top: 0;padding:0;margin:0">
+				<img src="../images/ico_arrow.png" />
+			</div>
+			<div class="setDate bba">
+				<a>截止日期</a>
+				<input id="eDatee" class="font26 normal" type="date" value="" style="position: absolute;width: 30%;height: .88rem;right: 0;top: 0;padding:0;margin:0">
+				<img src="../images/ico_arrow.png" />
+			</div>
+			<!--<input id="eDatee" type="date" style=" height:.88rem;font-size: .28rem; position: absolute;width: 100%;top:.88rem;;opacity: 0;">-->
+			<div class="setD bba">
+				<button id="reset" class="margin-left-30">重置</button>
+				<button id="but">确定</button>
+			</div>
+		</div>
+		<div class="mengceng none" id="mengceng" style="position: relative;top: 0;left: 0;width: 100vw;height: 100vh;z-index: 99;background-color: rgba(0,0,0,.4)"></div>
+		<div id="list_order" style="display: none">
+			<div class="box"></div>
+			<section class="item payed addOrder other">
+				<img class="state" />
+				<div class="line">
+					<i class="item-name font32 color-424242 carOwner">Zack</i>
+					<i class="font24 plate licenseNo">沪J23133</i>
+					<span class="font32 color-ffa726 fee">￥<b class="normal totalFee">100.0</b></span>
+					<img src="../images/ico_jin.png" />
+				</div>
+				<div class="line margin-bottom-20">
+					<i class="font28 color-9e9e9e createTime">2017-11-11 11:00</i>
+					<i class="font30 color-ff7043 point"></i>
+					<input type="hidden" id="quotationNo">
+					<img class="ico_ji" src="../images/ico_jin copy.png" />
+				</div>
+				<div class="quotationNo">
+					<p class="quotationNoshowS font20"></p>
+					<p class="quotationNoshowJ font20"></p>
+				</div>
+				<div class="feiche quotationNo">
+					<p class="font28 productionName"></p>
+					<p class="baodanhao font20"></p>
+				</div>
+				<div class="quotationNo">
+					<p class="start font20"></p>
+					<p class="end font20"></p>
+				</div>
+				<div id="insuredOpinion" class="quotationNo" style="display: none">
+					<p class="insuredOpinion font20"></p>
+				</div>
+				<button class="delete">删除</button>
+			</section>
+		</div>
+		<!--下拉刷新容器-->
+		<div id="refreshContainer" class="mui-content mui-scroll-wrapper" style="top: .88rem;">
+			<div class="mui-scroll">
+				<!--数据列表-->
+				<div class="mui-table-view mui-table-view-chevron" id="hldoer"></div>
+			</div>
+		</div>
+		<img class="search" src="../images/ico_lipeichaxun.png" />
+		<section class="bddd none queryPolicyInfo">
+			<div class="bdcentent">
+				<header class="header">
+					<i class="left font30 color-999 cancel">取消</i>
+					<i class="font36 color-414141 binding">查询保单</i>
+					<i class="right font30 color-d3a27c">重查</i>
+					<div class="clear"></div>
+				</header>
+				<div class="bdh font24 color-666 padding-top-30 padding-left-30 color-666">
+					保单号
+					<input class="input block margin-top-30 font30 padding-left-30 policyno" type="text" placeholder="213123123">
+					<i class="margin-top-30 block">车主名</i>
+					<input class="input block margin-top-30 font30 padding-left-30 carowner" type="text" placeholder="请输入车主名...">
+					<i class="margin-top-30 block">身份证</i>
+					<input class="input block margin-top-30 font30 padding-left-30 credentialno" type="number" placeholder="请输入身份证号...">
+				</div>
+				<button class="margin-left-30 btn bg-color-d3a27c color-fff font34 select">查询</button>
+			</div>
+		</section>
+		<section class="bddd none bindingPolicy">
+			<div class="bdcentent background-color-fff relative height-564">
+				<header class="header">
+					<i class="left font30 color-999 quxiao">取消</i>
+					<i class="font36 color-414141">绑定保单</i>
+					<i class="right font30 color-d3a27c cSel">重查</i>
+					<div class="clear"></div>
+				</header>
+				<i class="font32 color-d3a27c ib money premium" id="premium">￥1,000.0</i>
+				<img class="ib jin" src="../images/ico_jin.png">
+				<img class="ib ji" src="../images/ico_jin copy.png">
+				<i class="ib font30 jifen" id="jifen">50</i>
+				<section class="item-sm background-color-f8f8f8 margin-left-30 margin-top-92">
+					<img class="state" src="../images/ico_S5.png" />
+					<i class="item-name font32 color-424242 insuredname" id="insuredname">Zack</i>
+					<i class="font24 plate licenseno" id="licenseno">沪J23133</i>
+					<i class="font28 color-9e9e9e">2017-11-11 11:00</i>
+				</section>
+				<button class="margin-left-30 btn bg-color-d3a27c color-fff font34" id="bindingPolicy">绑定</button>
+			</div>
+		</section>
+		<section id="zhifuye" class="pay none">
+				<div class="contents">
+					<div class="pay-num">
+						<!--<i class="cancel font30 color-999">取消</i>-->
+						<!--<span id="jine" class="span color-212121"></span>-->
+						<i class="font24 pay-list color-666">请选择支付方式</i>
+					</div>
+					<div class="pay-style">
+					<li class="zhifu we-sao font30 border-bottom">微信扫码支付
+						<img class="dw" src="../images/ico_select_normal.png" alt=""/></li>
+					<!--<li class="we font30 border-bottom">微信支付</li>-->
+					<li class="zhifu lt font30 border-bottom">通联支付
+						<img class="dw" src="../images/ico_select_normal.png" alt=""/>
+					</li>
+					<li class="zhifu we-liji font30 border-bottom">微信立即支付
+						<img class="dw" src="../images/ico_select_normal.png" alt=""/>
+					</li>
+					<!-- <li class="zhifu pos font30">POS支付<img class="dw" src="../images/ico_select_normal.png" alt=""/></li> -->
+				</div>
+				<button id="lijizhifu" class="bg-color-d3a27c color-fff font34 now-pay">立即付款</button>
+			</div>
+		</section>
+		<script type="text/javascript" src="../js/Util.js"></script>
+		<script type="text/javascript" src="../js/jquery-3.2.0.js"></script>
+		<script type="text/javascript" src="../js/mui.min.js"></script>
+		<script type="text/javascript" src="../js/mobileapp.js"></script>
+		<script type="text/javascript" src="../js/loading.js"></script>
+		<script type="text/javascript" src="../js/toast.js"></script>
+		<script type="text/javascript" src="../js/products/Confirm.js"></script>
+		<script type="text/javascript" src="../js/ins_vehicle.js"></script>
+		<script type="text/javascript" src="../js/my/ins_order_list.js"></script>
+		<script src="../js/setrem.js"></script>
+		<script src="../js/Util.js"></script>
+		<script type="text/javascript" src="../js/wechat.js"></script>
+		<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+
+	</body>
+
+</html>

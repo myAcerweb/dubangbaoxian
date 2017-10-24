@@ -1,0 +1,118 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+}
+
+.content {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+}
+
+.list {
+	display: none;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	max-height: 66vh;
+	background: rgba(25, 30, 37, 0.4);
+	padding: 0.2rem;
+	overflow: auto;
+}
+
+.tips {
+	font-family: PingFangSC-Regular;
+	text-shadow: 0 2px 4px rgba(0, 0, 0, 0.30);
+	margin: 0.16rem 0;
+	text-align: center;
+}
+
+.address {
+	position: relative;
+	background: #fff;
+	box-sizing: border-box;
+	padding-left: 0.68rem;
+	padding-top: .2rem;
+	padding-bottom: .2rem;
+}
+.address:after{
+	content: "";
+	width: 100%;
+	height: 1px;
+	background-color: #f8f8f8;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	transform-origin: 50% 50%;
+	-webkit-transform-origin: 50% 50%;
+	transform: scaleY(.5);
+	-webkit-transform: scaleY(.5);
+}
+.address i,
+.address h6 {
+	font-family: .PingFangSC-Medium;
+	letter-spacing: 0;
+	font-style: normal;
+}
+
+.address i {
+	position: absolute;
+	width: 0.28rem;
+	height: .28rem;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 0.28rem;
+	background: #E65D5D;
+	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.10);
+	font-size: .22rem;
+	color: #FFFFFF;
+	left: 0.2rem;
+}
+
+.address h6 {
+	font-size: .28rem;
+	color: #424242;
+	margin-bottom: .2rem;
+}
+
+.address p {
+	font-family: .PingFangSC-Regular;
+	font-size: .28rem;
+	color: #888;
+	letter-spacing: 0;
+	line-height: .5rem;
+}
+.address p a {
+	color: #a3ccff;
+	text-decoration: none;
+}
+.address p span:first-child {
+	display: inline-block;
+	padding-left: .48rem;
+}
+
+.address p span.dizhi {
+	background: url(../../images/ico_dizhi.png) no-repeat left center;
+	background-size: .48rem;
+}
+
+.address p span.dianhua {
+	background: url(../../images/ico_tel.png) no-repeat left center;
+	background-size: .48rem;
+}
+
+#more {
+    display: block;
+    margin: .2rem auto 0 auto;
+    width: 100%;
+    height: .7rem;
+    line-height: .7rem;
+}

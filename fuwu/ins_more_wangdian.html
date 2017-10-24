@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<link rel="stylesheet" href="../css/normalize.min.css">
+		<link rel="stylesheet" href="../css/reset.css">
+		<link rel="stylesheet" href="../css/toast.css">
+		<link rel="stylesheet" type="text/css" href="../css/mui.min.css">
+		<link rel="stylesheet" href="../css/fuwu/ins_more_wangdian.css">
+
+		<title>网点查询</title>
+	</head>
+
+	<body>
+		<div id="container" class="content">
+			<header>
+				<input class="search font28" type="text" placeholder="请输入想要查询的城市名称" />
+				<button id="search" class="btn">搜索</button>
+			</header>
+			<nav id="selectArea" class="nav">
+				<span>服务网点省市</span>
+				<span class="addr">不限</span>
+			</nav>
+			<!--下拉刷新容器-->
+			<div id="refreshContainer" class="mui-content mui-scroll-wrapper list" style="top: 2rem;">
+				<div class="mui-scroll">
+					<div class="" id="holder"></div>
+					<div id='card' class="card none">
+						<h6 class="name">保定中心支公司</h6>
+						<p>
+							<span class="dizhi">地址 </span> <span class="addr">高碑店市南环路南侧锦上兰庭3号楼3号门市</span>
+						</p>
+						<p>
+							<span class="dianhua">电话 </span> <a href="javascript:void(0);" class="tel">0312-88888888</a>
+						</p>
+						<img src="../images/ico_daohang.png" alt="导航" />
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="drop" style="display: none;">
+			<div class="dropList">
+				<div class="pro">
+					<ul id="provinces" class="mui-table-view">
+						<li class="mui-table-view-cell">省/直辖市</li>
+					</ul>
+				</div>
+				<div class="city">
+					<ul id="citys" class="mui-table-view">
+						<li class="mui-table-view-cell">下属市</li>
+					</ul>
+				</div>
+			</div>
+			<footer>
+				<button id="cancel" class="btn font32" style="">取消</button>	
+				<button id="select" class="btn color-fff font32" style="background:#d3a27c">确定</button>	
+			</footer>
+		</div>
+		<script src="../js/jquery-3.2.0.js"></script>
+		<script src="../js/setrem.js"></script>
+		<script type="text/javascript" src="../js/mobileapp.js"></script>
+		<script type="text/javascript" src="../js/mui.min.js"></script>
+		<script type="text/javascript" src="../js/toast.js"></script>
+		<script type="text/javascript" src="../js/Util.js"></script>
+		<script src="../js/fuwu/ins_more_wangdian.js"></script>
+		<script type="text/javascript" src="../js/wechat.js"></script>
+		<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+		<script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&key=e71944426c5bf7e1264cdd0c7ae31609"></script>
+	</body>
+
+</html>

@@ -1,0 +1,138 @@
+input {
+    border: none;
+    outline: none;
+}
+
+select {
+    border: none;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+}
+
+.item {
+    height: 1rem;
+    line-height: 1rem;
+    margin-left: .3rem;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.position {
+    float: right;
+    margin-top: .3rem;
+    text-align: right;
+}
+
+input.position {
+    width: 3.2rem;
+}
+
+@media screen and (max-device-width: 330px) {
+    input.position {
+        width: 2.8rem;
+    }
+}
+
+.img {
+    vertical-align: middle;
+    margin-right: .2rem;
+    width: .3rem;
+}
+
+item {
+    display: block;
+    height: .98rem;
+    line-height: .98rem;
+    width: 100%;
+    border-bottom: 1px solid #ececec;
+    color: #616161;
+    background-color: #fff;
+    padding-left: .3rem;
+}
+
+.height200 {
+    height: 2rem;
+}
+
+.textarea {
+    width: calc(100% - .6rem);
+    height: .88rem;
+    border: none;
+    outline: none;
+    text-align: left;
+    resize: none;
+    background-color: #fff;
+}
+
+.camera {
+    width: .4rem;
+    height: auto;
+    float: right;
+    margin: .3rem .2rem 0 0;
+}
+
+#showCareerType {
+    background: none;
+}
+/*人员关系三级联动修改*/
+html, body {
+      position: relative;
+      height: 100%;
+    }
+    body {
+      background: #fff;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color:#000;
+      margin: 0;
+      padding: 0;
+    }
+    ._box {
+      display: none;
+      width: 100%;
+      height: 80%;
+      position: fixed;
+      top: 0;
+      left:0;
+      background: #fff;
+    }
+    .Box {
+      display: none;
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      top: 0;
+      left:0;
+     background: rgba(0, 0, 0,.35)
+    }
+    .box_left{width: 35%;height: 100%;float: left;}
+    .box_right{width: 65%;height: 100%;float: left;text-align: left;}
+    .box_right_t,.box_right_b{width: 94%;height: 45%;float: left;border-bottom: 1px solid #ccc;padding: 5% 3%;}
+    .swiper-container {
+      width: 100%;
+      height: 100%;
+    }
+    .swiper-slide {
+      text-align: center;
+      font-size: 0.3rem;
+      background: #fff;
+
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }
+    .box_left .swiper-slide { background: #f4f4f4;}
+    .box_left .swiper-slide { background: #f4f4f4;}
+    .box_right_t .swiper-slide { text-align: left!important;}

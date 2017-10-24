@@ -1,0 +1,83 @@
+.mui-switch {
+    width: .66rem;
+    height: .4rem;
+    position: relative;
+    border: 1px solid #d3a27c;
+    background-color: ##d3a27c;
+    box-shadow: #d3a27c 0 0 0 0 inset;
+    border-radius: .2rem;
+    border-top-left-radius: .2rem;
+    border-top-right-radius: .2rem;
+    border-bottom-left-radius: .2rem;
+    border-bottom-right-radius: .2rem;
+    background-clip: content-box;
+    display: inline-block;
+    -webkit-appearance: none;
+    user-select: none;
+    outline: none;
+}
+
+.mui-switch:before {
+    content: '';
+    width: .35rem;
+    height: .38rem;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    border-radius: .2rem;
+    border-top-left-radius: .2rem;
+    border-top-right-radius: .2rem;
+    border-bottom-left-radius: .2rem;
+    border-bottom-right-radius: .2rem;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.mui-switch:checked {
+    border-color: #d3a27c;
+    box-shadow: #d3a27c 0 0 0 16px inset;
+    background-color: #d3a27c;
+}
+
+.mui-switch:checked:before {
+    left: .3rem;
+}
+
+.mui-switch.mui-switch-animbg {
+    transition: background-color ease 0.4s;
+}
+
+.mui-switch.mui-switch-animbg:before {
+    transition: left 0.3s;
+}
+
+.mui-switch.mui-switch-animbg:checked {
+    box-shadow: #d3a27c 0 0 0 0 inset;
+    background-color: #d3a27c;
+    transition: border-color 0.4s, background-color ease 0.4s;
+}
+
+.mui-switch.mui-switch-animbg:checked:before {
+    transition: left 0.3s;
+}
+
+.mui-switch.mui-switch-anim {
+    transition: border cubic-bezier(0, 0, 0, 1) 0.4s, box-shadow cubic-bezier(0, 0, 0, 1) 0.4s;
+}
+
+.mui-switch.mui-switch-anim:before {
+    transition: left 0.3s;
+}
+
+.mui-switch.mui-switch-anim:checked {
+    box-shadow: #d3a27c 0 0 0 16px inset;
+    background-color: #d3a27c;
+    transition: border ease 0.4s, box-shadow ease 0.4s, background-color ease 1.2s;
+}
+
+.mui-switch.mui-switch-anim:checked:before {
+    transition: left 0.3s;
+}
+
+
+/*# sourceMappingURL=mui-switch.css.map */

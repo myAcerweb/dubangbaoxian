@@ -1,0 +1,64 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	0	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+html	/Users/x/Desktop/demo/mobile/products/ins_car_info.html	/^<html lang="en">$/;"	function	line:2
+head	/Users/x/Desktop/demo/mobile/products/ins_car_info.html	/^	<head>$/;"	function	line:3
+meta	/Users/x/Desktop/demo/mobile/products/ins_car_info.html	/^		<meta charset="UTF-8">$/;"	function	line:4
+title	/Users/x/Desktop/demo/mobile/products/ins_car_info.html	/^		<title>车型信息<\/title>$/;"	function	line:5
+link	/Users/x/Desktop/demo/mobile/products/ins_car_info.html	/^		<link rel="stylesheet" href="..\/css\/normalize.min.css">$/;"	function	line:6
+link	/Users/x/Desktop/demo/mobile/products/ins_car_info.html	/^		<link rel="stylesheet" href="..\/css\/reset.css">$/;"	function	line:7
+link	/Users/x/Desktop/demo/mobile/products/ins_car_info.html	/^		<link rel="stylesheet" href="..\/css\/products\/ins_car_info.css">$/;"	function	line:8
+link	/Users/x/Desktop/demo/mobile/products/ins_car_info.html	/^		<link rel="stylesheet" href="..\/css\/loading.css">$/;"	function	line:9
+link	/Users/x/Desktop/demo/mobile/products/ins_car_info.html	/^		<link rel="stylesheet" href="..\/css\/toast.css">$/;"	function	line:10
+style	/Users/x/Desktop/demo/mobile/products/ins_car_info.html	/^		<style type="text\/css">$/;"	function	line:11
+body	/Users/x/Desktop/demo/mobile/products/ins_car_info.html	/^	<body>$/;"	function	line:27
+header	/Users/x/Desktop/demo/mobile/products/ins_car_info.html	/^		<header class="header bg-color-f8f8f8 font24 padding-left-30 padding-right-30 color-9e9e9e">车辆信息<i class="tip-mess color-d3a27c none">在哪里查看车辆信息<\/i>$/;"	function	line:28
+div	/Users/x/Desktop/demo/mobile/products/ins_car_info.html	/^		<div class="car-number margin-left-30 border-bottom font30 color-9e9e9e">$/;"	function	line:30
+input	/Users/x/Desktop/demo/mobile/products/ins_car_info.html	/^			<input id="plate" onchange="plateOnChange()" class="number-id font30 color-212121" type="text" placeholder="奔驰牌BJ6466G" onfocus="this.placeholder=''" onblur="this.placeholder='奔驰牌BJ6466G'"\/>$/;"	function	line:32
+form	/Users/x/Desktop/demo/mobile/products/ins_car_info.html	/^			<form id="plateForm" style="display: none" method="post" enctype="multipart\/form-data" style="text-align:center;margin:0 auto;">$/;"	function	line:37
+input	/Users/x/Desktop/demo/mobile/products/ins_car_info.html	/^				<input type="hidden" name="action" value="driving.scan"\/>$/;"	function	line:38
+p	/Users/x/Desktop/demo/mobile/products/ins_car_info.html	/^				<p>$/;"	function	line:39
+input	/Users/x/Desktop/demo/mobile/products/ins_car_info.html	/^					<input onchange="plateChange()" required="required" type="file" name="file" id="plateFile" value=""\/>$/;"	function	line:40
+span	/Users/x/Desktop/demo/mobile/products/ins_car_info.html	/^				<span style="color: red;">$/;"	function	line:42
+p	/Users/x/Desktop/demo/mobile/products/ins_car_info.html	/^				<p>用户名:$/;"	function	line:45
+input	/Users/x/Desktop/demo/mobile/products/ins_car_info.html	/^					<input required="required" value="f251a247-8241-4dab-909a-96f4e970f472" type="text" style="width: 300px;" name="username" onfocus="func1(this);" onblur="func2(this);"\/>$/;"	function	line:46
+p	/Users/x/Desktop/demo/mobile/products/ins_car_info.html	/^				<p>密&nbsp;码:$/;"	function	line:48
+input	/Users/x/Desktop/demo/mobile/products/ins_car_info.html	/^					<input required="required" value="BWCTskGmSynFrbCCWWrmutRFvTyVyW" type="text" style="width: 300px;" name="password" onfocus="func1(this);" onblur="func2(this);"\/>$/;"	function	line:49
+p	/Users/x/Desktop/demo/mobile/products/ins_car_info.html	/^				<p id="label_keyLang">返回格式:$/;"	function	line:51
+input	/Users/x/Desktop/demo/mobile/products/ins_car_info.html	/^					<input value="0" name="format" type="radio">$/;"	function	line:52
+label	/Users/x/Desktop/demo/mobile/products/ins_car_info.html	/^					<label for="key_eng_default">xml<\/label>$/;"	function	line:53
+input	/Users/x/Desktop/demo/mobile/products/ins_car_info.html	/^					<input value="1" name="format" checked="checked" type="radio">$/;"	function	line:54
+label	/Users/x/Desktop/demo/mobile/products/ins_car_info.html	/^					<label for="key_eng">json<\/label>$/;"	function	line:55
+input	/Users/x/Desktop/demo/mobile/products/ins_car_info.html	/^				<input type="submit" value="提交"\/>$/;"	function	line:57
+div	/Users/x/Desktop/demo/mobile/products/ins_car_info.html	/^		<div class="car-number margin-left-30 border-bottom font30 color-9e9e9e">$/;"	function	line:60
+div	/Users/x/Desktop/demo/mobile/products/ins_car_info.html	/^		<div class="car-number margin-left-30 border-bottom font30 color-9e9e9e">$/;"	function	line:73
+div	/Users/x/Desktop/demo/mobile/products/ins_car_info.html	/^		<div class="box"><\/div>$/;"	function	line:86
+div	/Users/x/Desktop/demo/mobile/products/ins_car_info.html	/^		<div class="car-number margin-left-30 border-bottom font30 color-9e9e9e">$/;"	function	line:87
+input	/Users/x/Desktop/demo/mobile/products/ins_car_info.html	/^			<input id="enrollDate" style="-webkit-appearance: none;" type="date" class="uiDate number-id font30 color-212121"\/>$/;"	function	line:89
+img	/Users/x/Desktop/demo/mobile/products/ins_car_info.html	/^			<img class="arrow" src="..\/images\/ico_arrow.png"\/>$/;"	function	line:91
+div	/Users/x/Desktop/demo/mobile/products/ins_car_info.html	/^		<div class="search-result bg-color-f8f8f8 font24 padding-left-30 color-9e9e9e none">查询结果<\/div>$/;"	function	line:93
+div	/Users/x/Desktop/demo/mobile/products/ins_car_info.html	/^		<div style="display: none;" id="result" class="result padding-top-30 border-bottom margin-left-30">$/;"	function	line:94
+i	/Users/x/Desktop/demo/mobile/products/ins_car_info.html	/^			<i class="introduce font30 color-424242"><\/i>$/;"	function	line:95
+i	/Users/x/Desktop/demo/mobile/products/ins_car_info.html	/^			<i class="price color-42a5f5 font26 margin-top-30"><\/i>$/;"	function	line:96
+i	/Users/x/Desktop/demo/mobile/products/ins_car_info.html	/^			<i class="num font26 color-EF5350"><\/i>$/;"	function	line:97
+img	/Users/x/Desktop/demo/mobile/products/ins_car_info.html	/^			<img class="select" src="..\/images\/ico_select_normal.png"\/>$/;"	function	line:98
+div	/Users/x/Desktop/demo/mobile/products/ins_car_info.html	/^		<div id="list"><\/div>$/;"	function	line:100
+div	/Users/x/Desktop/demo/mobile/products/ins_car_info.html	/^		<div id="nochexin" class="tip bg-color-f8f8f8 none">$/;"	function	line:101
+i	/Users/x/Desktop/demo/mobile/products/ins_car_info.html	/^			<i id="noVehicleModel" class="font24 color-d3a27c">不是以上车型<\/i>$/;"	function	line:102
+footer	/Users/x/Desktop/demo/mobile/products/ins_car_info.html	/^		<footer>$/;"	function	line:104
+button	/Users/x/Desktop/demo/mobile/products/ins_car_info.html	/^			<button id='bj' class="btn-lg bg-color-d3a27c color-fff font34 none bj">报价<\/button>$/;"	function	line:105
+button	/Users/x/Desktop/demo/mobile/products/ins_car_info.html	/^			<button id="goNext" class="btn-lg bg-color-d3a27c color-fff font34 search">车型查询<\/button>$/;"	function	line:106
+script	/Users/x/Desktop/demo/mobile/products/ins_car_info.html	/^		<script src="http:\/\/res.wx.qq.com\/open\/js\/jweixin-1.0.0.js"><\/script>$/;"	function	line:108
+script	/Users/x/Desktop/demo/mobile/products/ins_car_info.html	/^		<script src="..\/js\/setrem.js"><\/script>$/;"	function	line:109
+script	/Users/x/Desktop/demo/mobile/products/ins_car_info.html	/^		<script src="..\/js\/jquery-3.2.0.js"><\/script>$/;"	function	line:110
+script	/Users/x/Desktop/demo/mobile/products/ins_car_info.html	/^		<script type="text\/javascript" src="..\/js\/Util.js"><\/script>$/;"	function	line:111
+script	/Users/x/Desktop/demo/mobile/products/ins_car_info.html	/^		<script type="text\/javascript" src="..\/js\/wechat.js"><\/script>$/;"	function	line:112
+script	/Users/x/Desktop/demo/mobile/products/ins_car_info.html	/^		<script type="text\/javascript" src="..\/js\/loading.js"><\/script>$/;"	function	line:113
+script	/Users/x/Desktop/demo/mobile/products/ins_car_info.html	/^		<script type="text\/javascript" src="..\/js\/toast.js"><\/script>$/;"	function	line:114
+script	/Users/x/Desktop/demo/mobile/products/ins_car_info.html	/^		<script type="text\/javascript" src="..\/js\/mobileapp.js"><\/script>$/;"	function	line:115
+script	/Users/x/Desktop/demo/mobile/products/ins_car_info.html	/^		<script type="text\/javascript" src="..\/js\/ins_vehicle.js"><\/script>$/;"	function	line:116
+script	/Users/x/Desktop/demo/mobile/products/ins_car_info.html	/^		<script type="text\/javascript" src="..\/js\/ins_allinterface.js"><\/script>$/;"	function	line:117
+script	/Users/x/Desktop/demo/mobile/products/ins_car_info.html	/^		<script type="text\/javascript" src="..\/js\/products\/ins_car_info.js"><\/script>$/;"	function	line:118

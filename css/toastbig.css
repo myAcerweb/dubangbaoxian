@@ -1,0 +1,34 @@
+.tbgg {
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: rgba(0, 0, 0,.35);
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 998;
+}
+.tcontent {
+	background: #FFFFFF;
+	border-radius: 0.4rem;
+	width: 12rem;
+	padding: .6rem;
+	text-align: center;
+}
+.ttoast-text {
+    text-align: center;
+    font-size: 0.75rem;
+    line-height: 3rem;
+}
+.ttoast-btn {
+	background: rgb(211, 162, 124);
+	border-radius: 0.16rem;
+	width: 9rem;
+	height: 1.67rem;
+	color: rgb(255, 255, 255);
+	outline: none;
+	border: none;
+	font-size: 0.7rem;
+}

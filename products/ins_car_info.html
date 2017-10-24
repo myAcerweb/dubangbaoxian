@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>车型信息</title>
+		<link rel="stylesheet" href="../css/normalize.min.css">
+		<link rel="stylesheet" href="../css/reset.css">
+		<link rel="stylesheet" href="../css/products/ins_car_info.css">
+		<link rel="stylesheet" href="../css/loading.css">
+		<link rel="stylesheet" href="../css/toast.css">
+	</head>
+	<body>
+		<header class="header bg-color-f8f8f8 font24 padding-left-30 padding-right-30 color-9e9e9e">车辆信息
+			<i class="tip-mess color-d3a27c">在哪里查看车辆信息</i>
+		</header>
+		<div class="car-number margin-left-30 border-bottom font30 color-9e9e9e">
+			车牌型号
+			<input id="plate" onchange="plateOnChange()" class="number-id font30 color-212121" type="text" placeholder="别克SGM7161LX" onfocus="this.placeholder=''" onblur="this.placeholder='别克SGM7161LX'"/>
+			<div id="ocrImg" onclick="fileChange()" class="camera" src="../images/ico_Combined.png"></div>
+		        <!--云识别驾驶证需要的form 常态是隐藏-->
+		      <form id="plateForm" style="display: none" method="post" enctype="multipart/form-data" style="text-align:center;margin:0 auto;">
+		        <input type="hidden" name="action" value="driving.scan"/>
+		        <p>
+		          <input onchange="plateChange()" required="required" type="file" name="file" id="plateFile" value=""/>
+		        </p>
+		        <span style="color: red;">
+		          支持的文件格式：jpg、bmp、jpeg、png。 最大可上传：5M
+		        </span>
+		        <p>用户名:
+		          <input required="required" value="f251a247-8241-4dab-909a-96f4e970f472" type="text" style="width: 300px;" name="username" onfocus="func1(this);" onblur="func2(this);"/>
+		        </p>
+		        <p>密&nbsp;码:
+		          <input required="required" value="BWCTskGmSynFrbCCWWrmutRFvTyVyW" type="text" style="width: 300px;" name="password" onfocus="func1(this);" onblur="func2(this);"/>
+		        </p>
+		        <p id="label_keyLang">返回格式:
+		          <input value="0" name="format" type="radio">
+		          <label for="key_eng_default">xml</label>
+		          <input value="1" name="format" checked="checked" type="radio">
+		          <label for="key_eng">json</label>
+		        </p>
+		        <input type="submit" value="提交"/>
+		      </form>
+		</div>
+		<div class="car-number margin-left-30 border-bottom font30 color-9e9e9e">
+			车辆识别码
+			<input maxlength="17" id="cheJaHao" style="text-transform: uppercase;" onchange="cheJaHaoChange()" class="number-id font30 color-212121" type="text" placeholder="请输入车辆识别码" onfocus="this.placeholder=''" onblur="this.placeholder='请输入车辆识别码'"/>
+		</div>
+		<div class="car-number margin-left-30 border-bottom font30 color-9e9e9e">
+			发动机号
+			<input style="text-transform: uppercase;" maxlength="20" id="vehicleEngine" onchange="vehicleEngineChange()" class="number-id font30 color-212121" type="text" placeholder="请输入发动机号" onfocus="this.placeholder=''" onblur="this.placeholder='请输入发动机号'"/>
+		</div>
+		<div class="box"></div>
+		<div class="car-number margin-left-30 border-bottom font30 color-9e9e9e">
+			车辆初登日期
+			<!-- -webkit-appearance: none; -->
+			<input id="enrollDate"  type="date" class="uiDate number-id font30 color-212121"/>
+			<!-- <span id="enrollDateShow" class="uiDate number-id font30 color-212121"></span> -->
+			<!--<input class="uiDate number-id font30 color-212121" type="text" name="" id="" value="" style="opacity: 0;z-index: 22;"/>-->
+			<img class="calender" src="../images/ico_calender.png"/>
+		</div>
+		<div class="search-result bg-color-f8f8f8 font24 padding-left-30 padding-right-30 color-9e9e9e none">
+			<span class="left">查询结果</span><span class="right">请注意输入内容与行驶证一致</span>
+		</div>
+		<div style="display: none;" id="result" class="result padding-top-30 border-bottom margin-left-30">
+			<i class="introduce font30 color-424242"></i>
+			<i class="price color-42a5f5 font26 margin-top-30">新车参考价</i>
+			<i class="num font26 color-EF5350"></i>
+			<img class="select" src="../images/ico_select_normal.png"/>
+		</div>
+		<div id="list"></div>
+		<div id="nochexin" class="tip bg-color-f8f8f8 none">
+			<i id="noVehicleModel" class="font24 color-9e9e9e">不是以上车型暂无法报价</i>
+		</div>
+		<footer>
+			<button id='bj' class="btn-lg bg-color-d3a27c color-fff font34 none bj">选择投保方案</button>
+			<button id="goNext" class="btn-lg bg-color-d3a27c color-fff font34 search">车型查询</button>
+		</footer>
+		<!-- 用户信息 -->
+		<div class="user-message none">
+			<div class="ico-useless-useless"></div>
+			<span class="list margin-top-124">
+				<i class="left font28 color-616161 padding-left-150">车牌号码</i>
+				<input id='vehicleNum_e' class="right font28 color-616161 set-input" placeholder="沪A36813">
+			</span>
+			<span class="list">
+				<i class="left font28 color-616161 padding-left-150">发动机号</i>
+				<input id="vehicleEngine_e" class="right font28 color-616161 set-input" placeholder="A36813">
+			</span>
+			<span class="list">
+				<i class="left font28 color-616161 padding-left-150">车架号码</i>
+				<input id="cheJaHao_e" class="right font28 color-616161 set-input" placeholder="SADA36813">
+			</span>
+			<span class="list margin-bottom-85">
+				<i class="left font28 color-616161 padding-left-150">品牌型号</i>
+				<input id='vehicleModel_e' class="right font28 color-616161 set-input" placeholder="北京奔驰">
+			</span>
+			<button id="insureVehicleMessage" class="btn-lg bg-color-d3a27c color-fff font34 super confirm-info" style="position: absolute;">确定</button>
+			<div class="x-user-message" id="dirver_lic_close"></div>
+		</div>
+		<!-- 上传错误 -->
+		<div class="upload-wrong none">
+			<img class="img-wrong" src="../images/pic_bg_shibieshibai.png"/>
+			<i class="font28 color-5c5c5c wrong-mes">识别失败，请重新上传识别</i>
+			<button class="btn-lg bg-color-fff color-EF5350 font34 super re-upload margin-top-60 bold" style="position: absolute;">重新上传</button>
+			<div class="wrong-x-user-message"></div>
+		</div>
+		<div class="layer none"></div>
+		<div class="tbgg modal" style="display: none;">
+			<div class="content">
+				<header>
+					<h6>行驶证信息示例</h6>
+					<p>请对照红框选择区域进行填写</p>
+				</header>
+				<div class="shili">
+					<img src="../images/pic_shili.png" alt="行驶证"/>
+				</div>
+			</div>
+			<button class="modal-btn"><img src="../images/ico_close.png" alt="关闭" /></button>
+		</div>
+		<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+		<script src="../js/setrem.js"></script>
+		<script src="../js/jquery-3.2.0.js"></script>
+		<script type="text/javascript" src="../js/Util.js"></script>
+		<script type="text/javascript" src="../js/loading.js"></script>
+		<script type="text/javascript" src="../js/toast.js"></script>
+		<script type="text/javascript" src="../js/mobileapp.js"></script>
+		<script type="text/javascript" src="../js/wechat.js"></script>
+		<script type="text/javascript" src="../js/ins_vehicle.js"></script>
+		<script type="text/javascript" src="../js/products/Confirm.js"></script>
+		<script type="text/javascript" src="../js/ins_allinterface.js"></script>
+		<script type="text/javascript" src="../js/products/ins_car_info.js"></script>
+		   <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+ 
+	</body>
+</html>

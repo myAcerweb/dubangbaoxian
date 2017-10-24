@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>产品列表</title>
+    <link rel="stylesheet" href="../css/normalize.min.css">
+    <link rel="stylesheet" href="../css/swiper.min.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/products/ins_products.css">
+    <link rel="stylesheet" href="../css/toast.css">
+    <link rel="stylesheet" href="../css/loading.css">
+</head>
+
+<body style="background-color: #f5f5f5;">
+
+<div class="swiper-slide cx" id="clone" style="display: none">
+    <img  id="image_url" src="../images/pic_chanpin1.png"/>
+    <i class="swiper-slide-title font30 color-212121 bold" id="prodict_name">车险</i>
+    <i class="summary font24 color-959595" id="product_description"></i>
+    <span class="price font26" id="product_price">￥600.0起</span>
+</div>
+
+<i id="category_title" class=" font34 color-d3a27c margin-left-30 i-blodk" style="display: none">出行险</i>
+<div id="category_list" class=" swiper-container padding-right-30" style="display: none">
+    <div class="swiper-wrapper" id="items">
+    </div>
+</div>
+
+<!--<i class="font34 color-d3a27c margin-left-30 i-blodk">意健险</i>
+<div class="swiper-container padding-right-30">
+    <div class="swiper-wrapper" id="product_Asset">
+
+    </div>
+</div>
+<i class="font34 color-d3a27c margin-left-30 i-blodk">财产险</i>
+<div class="swiper-container padding-right-30">
+    <div class="swiper-wrapper" id="product_Health">
+
+    </div>
+</div>-->
+<script type="text/javascript" src="../js/wechat.js"></script>
+<script type="text/javascript" src="../js/mobileapp.js"></script>
+<script src="../js/setrem.js"></script>
+<script src="../js/jquery-3.2.0.js"></script>
+<script src="../js/swiper.jquery.min.js"></script>
+<script type="text/javascript" src="../js/Util.js"></script>
+<script type="text/javascript" src="../js/ins_vehicle.js"></script>
+<script type="text/javascript" src="../js/toast.js"></script>
+<script type="text/javascript" src="../js/loading.js"></script>
+<script src="../js/products/products.js"></script>
+<script type="text/javascript" src="../js/wechat.js"></script>
+   <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+ 
+
+<script>
+    var ss = document.querySelector('.cx');
+
+    function _go() {
+        window.location.href = 'ins_car_owner.html?action=newpage';
+    }
+    ss.addEventListener('click', _go);
+</script>
+</body>
+
+</html>

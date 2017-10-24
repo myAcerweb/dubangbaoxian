@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>积分</title>
+    <link rel="stylesheet" href="../css/normalize.min.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/my/ins_credit_list.css">
+  </head>
+  <body>
+    <i class="font24 color-fff cd">积分明细></i>
+    <i class="color-fff font88 cnum">1203</i>
+    <i class="font28 color-fff zjf">总积分</i>
+    <button class="bg-color-fff color-42a5f5 font34 get">立即提取</button>
+    <span class="margin-lright-30 li font32 color-9e9e9e mt17">本周<i class="font34 color-42a5f5 right">1301</i>
+    </span>
+    <span class="margin-right-30 li font32 color-9e9e9e">本月<i class="font34 color-42a5f5 right">1301</i>
+    </span>
+    <span class="margin-right-30 li font32 color-9e9e9e">本季<i class="font34 color-42a5f5 right">1301</i>
+    </span>
+    <span class="margin-right-30 li font32 color-9e9e9e">本年<i class="font34 color-42a5f5 right">1301</i>
+    </span>
+    <script src="../js/setrem.js"></script>
+    <script type="text/javascript" src="../js/jquery-3.2.0.js"></script>
+    <script type="text/javascript" src="../js/mobileapp.js"></script>
+    <script type="text/javascript" src="../js/Util.js"></script>
+    <script type="text/javascript" src="../js/wechat.js"></script>
+       <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+ 
+    <script>
+      var tq = document.querySelector('.cd');
+      function _tq() {
+        window.location.href = 'ins_credit_datail.html?action=newpage'
+      }
+      tq.addEventListener('click', _tq);
+    </script>
+  </body>
+</html>

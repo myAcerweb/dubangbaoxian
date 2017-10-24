@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>投保方案</title>
+		<link rel="stylesheet" type="text/css" href="../css/normalize.min.css">
+		<link rel="stylesheet" type="text/css" href="../css/reset.css">
+		<link rel="stylesheet" type="text/css" href="../css/products/ins_kinds_modify.css">
+		<link rel="stylesheet" href="../css/loading.css">
+		<link rel="stylesheet" href="../css/toast.css">
+		<link rel="stylesheet" href="../css/yzm.css">
+		<style>
+			.bgNone {
+				background: none;
+				background-color: rgba(62, 189, 246, .1);
+			}
+			input[type="date"]::-webkit-calendar-picker-indicator,
+			input[type="date"]::-webkit-inner-spin-button {
+				width: 2rem;
+			}
+		</style>
+		<link rel="stylesheet" href="../css/switch.css">
+	</head>
+	<body>
+		<section id="inputTest" onclick="window.location.href='input.html'" class="title bg-color-f8f8f8 font24 color-999">交强险调整</section>
+		<div class=" font32 color-616161 user xianzhong margin-left-30 bold margin-right-30">
+			交强险
+			<label class="right switch sw jqx">
+				<input id="ci_btn" class="mui-switch" type="checkbox" value="mui10">
+			</label>
+		<li class="margin-right-fu30">
+			<div id="sqri" style="width:4rem;height: 0.5rem;">
+				<i class="font28 normal left color-9e9e9e">起保期</i>
+				<!-- <div id="ci" style="z-index: 9999;overflow: hidden;" class="sj font26 normal dingwei"></div> -->
+				<input id="ci" style="" class="sj font26 normal dingwei" type="date" value="">
+				<!-- <span style="" class="sj font26 normal dingwei" type="text" value=""></span> -->
+			</div>
+		</select>
+	</i>
+</li>
+</div>
+<section class="title bg-color-f8f8f8 font24 color-999">商业险调整</section>
+<div class=" font32 color-616161 user xianzhong sy margin-left-30 border-bottom bold">
+商业险
+<i class="qbq normal font28 color-9e9e9e">起保期</i>
+<!--<div class="sj font26 normal">2012-12-12</div>-->
+<input id="bi" style="bottom: .2rem" class="sj font26 normal" type="date" value="">
+<!-- <span style="bottom: .2rem" class="sj font26 normal" type="text" value=""></span> -->
+</div>
+<div id="kind_list">
+<div class="font32 color-616161 user xianzhong sy margin-left-30 border-bottom bold " style="display: none;" id="insurance_A">
+	<span class="kindName">车损险</span>
+	<label class="right switch sw">
+		<input class="mui-switch" type="checkbox" checked>
+	</label>
+	<div class="content">
+		<span id="tianshu" class="font28 normal tt color-9e9e9e" style="position: absolute;bottom: 0;left: 0.7rem;font-weight: 400;display: none">天数</span>
+		<input id="quantity" class="quantity font26 normal iinput bgNone" style="width: 10%;position: absolute;bottom: .3rem;left: 1.5rem;background-color: rgba(62, 189, 246, .1);border-radius:.1rem;display: none">
+		<i class="font28 normal tt color-9e9e9e" id="baoee">保额</i>
+		<i class="qbq noducty"><img src="../images/ico_bjmp_pre.png" id="ico_bjmp_pre"/></i>
+		<!--<input class="baoe-list positionrb" list="baoe" type="" name="" id="" value="" />-->
+		<option value="10万" id="noe" style="display: none"></option>
+		<select id="baoe" class="money font26 normal iinput" style="display: none"></select>
+		<input type="number" class="money font26 normal iinput amount bgNone" style="display: none;" value="2000元">
+	</div>
+</div>
+</div>
+<!--
+		<div class="font32 color-616161 user xianzhong sy margin-left-30 border-bottom bold" style="display: none;" id="insurance_B">
+			第三者责任险
+			<label class="right switch sw">
+            <input class="mui-switch" type="checkbox" checked>
+        </label>
+			<i class="font28 normal tt color-9e9e9e">保额</i>
+			<i class="qbq normal"><img src="../images/ico_bjmp_pre.png" /></i>
+			<input type="text" class="money font26 normal iinput" value="2000元">
+		</div>
+		<div class="font32 color-616161 user xianzhong sy margin-left-30 border-bottom bold" style="display: none;" id="insurance_D4">
+			车上人员责任险（乘客）
+			<label class="right switch sw">
+            <input class="mui-switch" type="checkbox" checked>
+        </label>
+			<i class="font28 normal tt color-9e9e9e">保额</i>
+			<i class="qbq normal"><img src="../images/ico_bjmp_pre.png" /></i>
+			<input type="text" class="money font26 normal iinput" value="2000元">
+		</div>
+		<div class="font32 color-616161 user xianzhong sy margin-left-30 border-bottom bold" style="display: none;"  id="insurance_D3">
+			车上人员责任险（驾驶员）
+			<label class="right switch sw">
+            <input class="mui-switch" type="checkbox" checked>
+        </label>
+			<i class="font28 normal tt color-9e9e9e">保额</i>
+			<i class="qbq normal"><img src="../images/ico_bjmp_pre.png" /></i>
+			<input type="text" class="money font26 normal iinput bg-color-ddd color-9e9e9e" value="2000元" disabled="true">
+		</div>
+		<div class="font32 color-616161 user xianzhong sy margin-left-30 border-bottom bold" style="display: none;" id="insurance_G">
+			全车盗抢险
+			<label class="right switch sw">
+            <input class="mui-switch" type="checkbox" checked>
+        </label>
+			<i class="font28 normal tt color-9e9e9e">保额</i>
+			<i class="qbq normal"><img src="../images/ico_bjmp_pre.png" /></i>
+			<input type="text" class="money font26 normal iinput bg-color-ddd color-9e9e9e" value="2000元" disabled="true">
+		</div>
+		<div class="font32 color-616161 user xianzhong sy margin-left-30 border-bottom bold" style="display: none;" id="insurance_F">
+			玻璃单独破碎险
+			<label class="right switch sw">
+            <input class="mui-switch" type="checkbox" checked>
+        </label>
+			<i class="font28 normal tt color-9e9e9e">保额</i>
+			<input type="text" class="money font26 normal iinput" value="2000元">
+		</div>
+		<div class="font32 color-616161 user xianzhong sy margin-left-30 border-bottom bold tap-switch" style="display: none;" id="insurance_L">
+			车身划痕损失险
+			<label class="right switch sw">
+            <input class="mui-switch" type="checkbox" checked>
+        </label>
+		</div>
+		<div class="font32 color-616161 user xianzhong sy margin-left-30 border-bottom bold" style="display: none;" id="insurance_X1">
+			发动机涉水险
+			<label class="right switch sw">
+            <input class="mui-switch" type="checkbox" checked>
+        </label>
+			<i class="qbq normal"><img src="../images/ico_bjmp_normal.png" /></i>
+		</div>
+		<div class="font32 color-616161 user xianzhong sy margin-left-30 border-bottom bold close" style="display: none;" id="insurance_Q4">
+			指定修理厂险
+
+			// 我不确定加在哪 你确定下。- -刘强晖
+			<span style="position: absolute;bottom: 0;left: 1.2rem;font-weight: 400;">天数</span>
+			<input style="width: 10%;position: absolute;bottom: .3rem;left: 2rem;background-color: rgba(62, 189, 246, .1);border-radius:.1rem;">
+
+			<label class="right switch sw">
+            <input class="mui-switch" type="checkbox" checked>
+        </label>
+		</div>
+		<div class=" font32 color-616161 user xianzhong sy margin-left-30 border-bottom bold close" style="display: none;" id="insurance_B">
+			无法找到第三者
+			<label class="right switch sw">
+            <input class="mui-switch" type="checkbox" checked>
+        </label>
+		</div> -->
+<div class="box-sm"></div>
+<footer>
+<button class="btn-lg bg-color-d3a27c color-fff font34" id="quote">报价</button>
+<!--<button class="btn-lg bg-color-d3a27c color-fff font34" id="VehicleQuery">车型查询</button>-->
+</footer>
+
+<section id="chooseDialog" class="choose">
+	<div class="content bg-color-fff">
+		<header class="font32 color-666">请选择出单员</header>
+		<ul id="userlist" class="lists font30 border-bottom">
+			<li id="userItem" class="border-bottom none">
+				<span class="name">214194</span>
+				<input type="hidden" class="userCode"/>
+				<input type="hidden" class="comCode"/>
+				<input type="hidden" class="areaCode"/>
+				<input type="hidden" class="packageType"/>
+				<input type="hidden" class="packageCode"/>
+				<input class="selected" id="_1" name="user" type="radio" style="display: none;"/>
+				<label for="_1" class="select"></label>
+			</li>
+		</ul>
+      	<button id="selectUser" class="bg-color-d3a27c color-fff font34">确 定</button>
+	</div>
+</section>
+
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script type="text/javascript" src="../js/jquery-3.2.0.js"></script>
+<script src="../js/loading.js"></script>
+<script type="text/javascript" src="../js/toast.js"></script>
+<script type="text/javascript" src="../js/Util.js"></script>
+<script src="../js/setrem.js"></script>
+<script type="text/javascript" src="../js/wechat.js"></script>
+<script src="../js/mobileapp.js"></script>
+<script src="../js/ins_vehicle.js"></script>
+<script type="text/javascript" src="../js/Util.js"></script>
+<script src="../js/yzm.js"></script>
+<script src="../js/products/ins_kinds_modify.js"></script>
+<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+ 
+</body>
+</html>

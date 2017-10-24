@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/normalize.min.css" />
+		<link rel="stylesheet" type="text/css" href="../css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="../css/toast.css" />
+		<link rel="stylesheet" type="text/css" href="../css/mui.picker.css" />
+		<link rel="stylesheet" href="../css/loading.css">
+		<link rel="stylesheet" type="text/css" href="../css/swiper.min.css">
+		<link rel="stylesheet" type="text/css" href="../css/products/ins_car_owner_info.css?v2" />
+		
+		
+	</head>
+
+	<body class="bg-color-f8f8f8 padding-top-30">
+		<section class="bg-color-fff">
+			<div class="item font30 color-616161">
+				<img class="img" src="../images/ico_chezhu.png" />姓名
+				<input id="name" class="position margin-right-30" maxlength="5" type="text" name="name"  placeholder="请输入姓名" />
+			</div>
+		</section>
+		<section class="bg-color-fff">
+			<div class="item font30 color-616161">
+				<img  class="img" src="../images/ico_phone.png" />电话
+				<input id="phone" class="position margin-right-30" maxlength="11" type="tel" name="name"  placeholder="请输入电话号码" />
+			</div>
+		</section>
+		<section class="bg-color-fff">
+			<div class="item font30 color-616161">
+				<img  class="img" src="../images/ico_cardnumber.png" />
+				<select name="" id="Idtype" class="font30" style="border: none;outline: none;-webkit-appearance: none;margin-left: -.1rem; -moz-appearance: none; -o-appearance: none; appearance: none;">
+					<option value="01" class="font30">身份证</option>
+					<!--<option value="02" class="font30">户口簿</option>
+					<option value="03" class="font30">护照</option>
+					<option value="04" class="font30">军官证</option>
+					<option value="05" class="font30">驾驶执照</option>
+					<option value="06" class="font30">返乡证</option>
+					<option value="" class="font30">出生证号</option>
+					<option value="10" class="font30">港澳身份证</option>
+					<option value="99" class="font30">其他</option>-->
+				</select>
+				<img class="camera img-id-card" src="../images/ico_Combined.png" onclick="shenfenclick()"/>
+				<!--云识别身份证需要的form 常态是隐藏-->
+				<form id="uploadForm" name="uploadForm" method="post" enctype="multipart/form-data" style="display: none;">
+					<input type="hidden" name="action" value="idcard.scan"/>
+					<p>
+						<input required="required" onchange="fileChange()" type="file" name="file" id="file" value=""/>
+					</p>
+					<span style="color: red;">
+						支持的文件格式：jpg、bmp、jpeg、png。 最大可上传：5M
+					</span>
+					<p>用户名:
+						<input required="required" value="f251a247-8241-4dab-909a-96f4e970f472" type="text" style="width: 300px;" name="username" onfocus="func1(this);" onblur="func2(this);"/>
+					</p>
+					<p>密&nbsp;码:
+						<input required="required" value="BWCTskGmSynFrbCCWWrmutRFvTyVyW" type="text" style="width: 300px;" name="password" onfocus="func1(this);" onblur="func2(this);"/>
+					</p>
+					<p>是否显示座标:
+						<input value="1" name="er" checked="checked" type="radio">
+						<label for="key_eng_default">不显示</label>
+						<input value="0" name="er" type="radio">
+						<label for="key_eng">显示</label>
+					</p>
+					<p>是否返回头像图片流:
+						<input value="0" name="header" checked="checked" type="radio">
+						<label for="key_eng_default">否</label>
+						<input value="1" name="header" type="radio">
+						<label for="key_eng">是</label>
+					</p>
+					<p id="label_keyLang">返回格式:
+						<input value="0" name="format" type="radio">
+						<label for="key_eng_default">xml</label>
+						<input value="1" name="format" checked="checked" type="radio">
+						<label for="key_eng">json</label>
+					</p>
+					<input type="submit" value="提交"/>
+				</form>
+				<input id="id" class="position" style="margin-right: .15rem; width: 3.15rem" maxlength="18"  name="name" placeholder="请输入证件号"  />
+			</div>
+		</section>
+		<!--<section class="bg-color-fff">
+			<div class="item font30 color-616161" id="">
+				<img  class="img" src="../images/ico_cardnumber.png" />身份证
+				<input id="id" style="text-transform:uppercase" class="position margin-right-30" maxlength="18" name="name" placeholder="请输入身份证号" />
+			</div>
+		</section>-->
+		
+		<div id="NocarInsure" style="display: none;">
+			<section class="bg-color-fff">
+				<div class="item font30 color-616161">
+					<img class="img" src="../images/ico_chezhu.png" />性别
+					<!--<input id="name" class="position margin-right-30" maxlength="5" type="text" name="name"  placeholder="请输入姓名" />-->
+					<select name="" id="InsureSex" class="position margin-right-30" style="text-indent: 1rem;width: 1.5rem;">
+						<option value="" disabled selected></option> 
+						<option value="1" class="font30">男</option>
+						<option value="2" class="font30">女</option>
+					</select>
+				</div>
+			</section>
+			<section id="relationship" class="bg-color-fff">
+				<div class="item font30 color-616161">
+					<img class="img" src="../images/ico_chezhu.png" />与投保人关系
+					<!--<input id="name" class="position margin-right-30" maxlength="5" type="text" name="name"  placeholder="请输入姓名" />-->
+					<select name="" id="InsureRelation" class="position margin-right-30">
+						<option value="1" class="font30">本人</option>
+						<option value="2" class="font30">配偶</option>
+						<option value="3" class="font30">父子</option>
+						<option value="4" class="font30">父女</option>
+						<option value="5" class="font30">母子</option>
+						<option value="6" class="font30">母女</option>
+						<option value="7" class="font30">雇佣</option>
+						<option value="8" class="font30" selected="selected">其他</option>
+					</select>
+				</div>
+			</section>
+		</div>
+		
+		<section class="bg-color-fff">
+			<div class="item font30 color-616161">
+				<img class="img" src="../images/ico_chezhu.png" />电子邮箱
+				<input id="Email" class="position margin-right-30"  type="email" name="name"  placeholder="请输入邮箱" />
+			</div>
+		</section>
+
+		<section id="careerType" class="bg-color-fff none">
+			<div class="item font30 color-616161">
+				<img class="img" src="../images/ico_chezhu.png" />人员类型
+				<button name="" id="showCareerType" class="position margin-right-30">请选择人员类型</button>
+			</div>
+		</section>
+
+		<item class="border-none height200 font30">
+			<span>详细地址</span> <button id="showCityPicker">选择省市</button>
+			<textarea id="detailArea" class="textarea input-left" placeholder="请输入详细地址" name="name"></textarea>
+		</item>
+		
+		<button id="insure" class="btn-lg  color-fff font34" style="background:#d3a27c">确定</button>
+
+		<!-- 人员关系三级联动修改 -->
+		<div class="Box"></div>
+		<div class="_box">
+	  	<!--左边部分-->
+		  	<div class="box_left" id="box_left">
+		  		<div class="swiper-container" >
+				    <div class="swiper-wrapper">
+				      
+				      
+				    </div>
+				  </div>
+		  	</div>
+		  	<div class="box_right">
+		  		<div class="box_right_t" id="box_right_t">
+			  		<div class="swiper-container" >
+					    <div class="swiper-wrapper">
+					      
+					    </div>
+					  </div>
+			  	</div>
+			  	<div class="box_right_b" id="box_right_b" style="border: none;">
+			  		<div class="swiper-container" >
+					    <div class="swiper-wrapper">
+					      
+					    </div>
+					  </div>
+			  	</div>
+		  	</div>
+		</div>
+
+
+
+
+		 <script type="text/javascript" src="../js/swiper.min.js"></script>
+		<script type="text/javascript" src="../js/setrem.js"></script>
+		<script src="../js/jquery-3.2.0.js"></script>
+		<script src="../js/mobileapp.js"></script>
+		<script src="../js/toast.js"></script>
+		<script type="text/javascript" src="../js/loading.js" ></script>
+		<script type="text/javascript" src="../js/Util.js?v1"></script>
+		<script type="text/javascript" src="../js/wechat.js"></script>
+		<script type="text/javascript" src="../js/data.city.js"></script>
+		<script type="text/javascript" src="../js/mui.min.js"></script>
+		<script type="text/javascript" src="../js/mui.picker.min.js"></script>
+		<!-- <script type="text/javascript" src="../js/mui.picker.all.js"></script> -->
+		<script src="../js/ins_vehicle.js"></script>
+		<script src="../js/products/ins_car_owner_info.js?v2"></script>
+		<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+		
+	</body>
+
+</html>

@@ -1,0 +1,353 @@
+body,
+html {
+    overflow-x: hidden;
+}
+
+::-webkit-input-placeholder {
+    /* WebKit browsers */
+    color: #424242;
+}
+
+:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: #424242;
+}
+
+::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: #424242;
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10+ */
+    color: #424242;
+}
+
+.set-input {
+    width: 50%;
+    margin-right: .6rem;
+    outline: none;
+    border: none;
+}
+
+.logo {
+    width: 100%;
+    height: 3.4rem;
+    vertical-align: bottom;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #f5f5f5;
+}
+
+.car-number {
+    position: relative;
+    height: .98rem;
+    line-height: .98rem;
+}
+
+.arrow {
+    width: .14rem;
+    height: auto;
+}
+
+.camera {
+    position: absolute;
+    background: url(../../images/ico_Combined.png) no-repeat center center;
+    width: 1rem;
+    height: 1rem;
+    background-size: .4rem;
+    top: 0;
+    right: 0;
+}
+
+.car-number img {
+    position: absolute;
+    top: .3rem;
+    right: .3rem;
+}
+
+.number-id {
+    position: absolute;
+    left: 2rem;
+    height: .39rem;
+    padding: .3rem 0;
+    padding-left: .2rem;
+    border: none;
+    width: 4rem;
+}
+
+.check {
+    height: .7rem;
+    width: 100%;
+    line-height: .7rem;
+    overflow: hidden;
+    z-index: 2;
+    box-sizing: border-box;
+}
+
+.margin-top-115 {
+    margin-top: 1.15rem;
+}
+
+.margin-top-90 {
+    margin-top: .9rem;
+}
+
+.margin-top-60 {
+    margin-top: .6rem;
+}
+
+
+/* id-card */
+
+.id-card {
+    position: absolute;
+    top: 1.8rem;
+    left: .73rem;
+    z-index: 9;
+    border-radius: .2rem;
+    background-color: #fff;
+    height: 7.5rem;
+    width: calc(100% - 1.46rem);
+    z-index: 9;
+}
+
+.upload-wrong {
+    position: absolute;
+    top: 1.8rem;
+    left: .73rem;
+    z-index: 9;
+    border-radius: .2rem;
+    background-color: #fff;
+    height: 7.54rem;
+    width: calc(100% - 1.46rem);
+    z-index: 9;
+}
+
+.re-upload {
+    border: 2px solid #EF5350;
+}
+
+.user-message {
+    position: absolute;
+    top: 1.8rem;
+    left: .73rem;
+    z-index: 9;
+    border-radius: .2rem;
+    background-color: #fff;
+    height: 5.47rem;
+    width: calc(100% - 1.46rem);
+    z-index: 9;
+}
+
+.list {
+    display: block;
+    height: .3rem;
+    line-height: .3rem;
+    margin-top: .3rem;
+    text-align: center;
+}
+
+.ico-useless {
+    background-image: url(../../images/ico_popup_chezhu.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    top: -.44rem;
+    width: .88rem;
+    height: .88rem;
+    left: calc(50% - .44rem);
+    background-size: cover;
+    background-size: .88rem;
+}
+
+.margin-bottom-85 {
+    margin-bottom: .85rem;
+}
+
+.margin-top-124 {
+    margin-top: 1.24rem;
+}
+
+.ico-useless-useless {
+    background-image: url(../../images/ico_popup_chepai.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    top: -.44rem;
+    width: .88rem;
+    height: .88rem;
+    left: calc(50% - .44rem);
+    background-size: .88rem;
+}
+
+.side {
+    width: 4.18rem;
+    height: 2.37rem;
+    margin-left: .94rem;
+    margin-top: .9rem;
+    margin-bottom: .2rem;
+    border: 1px solid #f5f5f5;
+}
+
+.side-next {
+    width: 4.18rem;
+    height: 2.37rem;
+    margin-left: .94rem;
+    margin-bottom: .5rem;
+    border: 1px solid #f5f5f5;
+    vertical-align: bottom;
+}
+
+.super {
+    vertical-align: super;
+}
+
+.x-id-card {
+    background-image: url('../../images/ico_popup_close.png');
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 8.12rem;
+    width: .88rem;
+    height: .88rem;
+    left: calc(50% - .2315rem);
+    background-size: .88rem;
+}
+
+.img-wrong {
+    width: 100%;
+    vertical-align: bottom;
+}
+
+.wrong-mes {
+    text-align: center;
+    display: block;
+}
+
+.x-user-message {
+    background-image: url('../../images/ico_popup_close.png');
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 6.07rem;
+    width: .88rem;
+    height: .88rem;
+    left: calc(50% - .2315rem);
+    background-size: .88rem;
+}
+
+.wrong-x-user-message {
+    background-image: url('../../images/ico_popup_close.png');
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 8.07rem;
+    width: .88rem;
+    height: .88rem;
+    left: calc(50% - .2315rem);
+    background-size: .88rem;
+}
+
+.layer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #212121;
+    opacity: .34;
+    z-index: 3;
+    top: 0;
+    left: 0;
+}
+
+.padding-left-150 {
+    padding-left: 1rem;
+}
+
+.padding-right-150 {
+    padding-right: 1rem;
+}
+
+
+/* 地区蒙层 */
+
+.place {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.p-search {
+    height: .88rem;
+    width: calc(100% - .6rem);
+    padding-left: .3rem;
+    padding-top: .18rem;
+    padding-right: .3rem;
+    padding-bottom: 0;
+    line-height: .88rem;
+}
+
+.input-p-search {
+    width: calc(100% - .3rem);
+    height: .53rem;
+    line-height: .53rem;
+    display: block;
+    background-color: #fff;
+    border: 0;
+    padding-left: .3rem;
+    border-radius: .08rem;
+}
+
+.input-p-search::-webkit-input-placeholder {
+    text-align: center;
+    color: #ccc;
+}
+
+.tb {
+    height: 4rem;
+    background-color: #fff;
+}
+
+.tb-position {
+    height: 1.68rem;
+    position: relative;
+    border-bottom: 2px solid #ececec;
+}
+
+.tb-include {
+    height: 2rem;
+    position: relative;
+}
+
+.local {
+    position: absolute;
+    top: .88rem;
+    left: 0;
+    height: .76rem;
+    line-height: .76rem;
+    padding-left: .5rem;
+    width: 1.23rem;
+    border: 1px solid #d3a27c;
+    border-radius: .1rem;
+    background-image: url('../../images/ico_dingwei.png');
+    background-size: .3rem .34rem;
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-position: .1rem center;
+}
+
+.qg {
+    position: absolute;
+    top: .88rem;
+    left: 0;
+    height: .76rem;
+    line-height: .76rem;
+    text-align: center;
+    width: 1.73rem;
+    border: 1px solid #d3a27c;
+    border-radius: .1rem;
+}
+
+.input-idCard {
+    width: 50%;
+    margin-right: 0;
+    padding-right: 0.35rem;
+}

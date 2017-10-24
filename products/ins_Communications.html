@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>通联支付</title>
+    <link rel="stylesheet" href="../css/loading.css">
+    <link rel="stylesheet" href="../css/normalize.min.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/toast.css">
+  </head>
+  <body>
+    <div style="" id="div_">
+      <div style="font-size: .3rem;position: absolute;left: .3rem;top: .6rem;">
+        <span style="float:left">支付手机：</span>
+        <input type="tel" id="zhifushoujihao" placeholder="输入手机号" maxlength="11" style="font-size: .3rem;float:left;width:50%;margin-top: -.03rem">
+      </div>
+      <div style="margin-top: 20%">
+        <button class="btn-lg bg-color-d3a27c color-fff font34 super confirm-info" id="but_">生成订单</button>
+      </div>
+    </div>
+    <form id="formid" name="myform" method="post" style="display: none;">
+      <table style="width: 100%;text-align: center" border="1">
+        <tr>
+          <td width="40%" height="80" align="">
+            <span style="font-size: 40px">订单来源代码</span>
+          </td>
+          <td><input type="text" value="" name="orderSource" id="orderSource" placeholder="订单来源代码" style="font-size: 50px"></td>
+        </tr>
+        <tr>
+          <td width="40%" height="80" align="">
+            <span style="font-size: 40px">第三方订单编号</span>
+          </td>
+          <td><input type="text" value="" name="outOrderNo" id="outOrderNo" placeholder="第三方订单编号" style="font-size: 50px"></td>
+        </tr>
+        <tr>
+          <td width="40%" height="80" align="">
+            <span style="font-size: 40px">订单总金额</span>
+          </td>
+          <td><input type="text" value="" name="sumPayFee" id="sumPayFee" placeholder="订单总金额" style="font-size: 50px">
+          </td>
+        </tr>
+        <tr>
+          <td width="40%" height="80" align="">
+            <span style="font-size: 40px">出单员</span>
+          </td>
+          <td><input type="text" value="" name="operateCode" id="operateCode" placeholder="出单员" style="font-size: 50px"></td>
+        </tr>
+        <tr>
+          <td width="40%" height="80" align="">
+            <span style="font-size: 40px">业务类型</span>
+          </td>
+          <td><input type="text" value="" name="businessType" id="businessType" placeholder="业务类型" style="font-size: 50px"></td>
+        </tr>
+        <tr>
+          <td width="40%" height="80" align="">
+            <span style="font-size: 40px">支付手机号</span>
+          </td>
+          <td><input type="text" value="" name="mobileNumber" id="mobileNumber" placeholder="支付手机号" style="font-size: 50px"></td>
+        </tr>
+        <tr>
+          <td width="40%" height="80" align="">
+            <span style="font-size: 40px">异步通知标志</span>
+          </td>
+          <td>
+            <input type="text" value="" id="callBackFlag" placeholder="异步通知标志" style="font-size: 50px">
+            <input type="hidden" value="" name="callBackFlag" id="callBackFlag1">
+          </td>
+        </tr>
+        <tr>
+          <td width="40%" height="80" align="">
+            <span style="font-size: 40px">异步通知地址</span>
+          </td>
+          <td><input type="text" value="" name="callBackUrl" id="callBackUrl" placeholder="异步通知地址" style="font-size: 50px"></td>
+        </tr>
+        <tr>
+          <td width="40%" height="80" align="">
+            <span style="font-size: 40px">订单信息</span>
+          </td>
+          <td><input type="text" value="" name="goods" id="goods" placeholder="订单信息" style="font-size: 50px"></td>
+        </tr>
+        <tr>
+          <td width="40%" height="80" align="">
+            <span style="font-size: 40px">签名信息</span>
+          </td>
+          <td><input type="text" value="" name="sign" id="sign" placeholder="签名信息" style="font-size: 50px"></td>
+        </tr>
+        <tr>
+          <td width="40%" height="80" align="">
+            <span style="font-size: 40px">mobilePay</span>
+          </td>
+          <td>
+            <input type="text" value="" name="actionType" id="actionType" placeholder="mobilePay" style="font-size: 50px">
+            <input type="hidden" id="url" style="font-size: 50px">
+          </td>
+        </tr>
+      </table>
+    </form>
+    <script src="../js/jquery-3.2.0.js"></script>
+    <script src="../js/loading.js"></script>
+    <script type="text/javascript" src="../js/toast.js"></script>
+    <script type="text/javascript" src="../js/mobileapp.js"></script>
+    <script type="text/javascript" src="../js/Util.js"></script>
+    <script type="text/javascript" src="../js/ins_vehicle.js"></script>
+    <script type="text/javascript" src="../js/products/ins_Communications.js"></script>
+    <script type="text/javascript" src="../js/wechat.js"></script>
+    <script src="../js/setrem.js"></script>
+    <script type="text/javascript" src="../js/zepto.min.js"></script>
+       <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+ 
+  </body>
+</html>

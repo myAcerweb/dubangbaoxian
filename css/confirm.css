@@ -1,0 +1,45 @@
+._bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .35);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 888;
+}
+
+._content {
+    background: #FFFFFF;
+    border-radius: 0.2rem;
+    width: 6rem;
+    padding: .3rem;
+    text-align: center;
+    position: relative;
+}
+
+._title {
+    display: block;
+    line-height: .52rem;
+}
+
+._tips {
+    padding-top: .4rem;
+    padding-bottom: .2rem;
+    line-height: 1.2;
+}
+
+._btn {
+    border-radius: 0.08rem;
+    outline: none;
+    border: none;
+    font-size: 0.34rem;
+    width: 45%;
+    line-height: .88rem;
+}
+
+._btnlg{
+    width: 90%;
+}

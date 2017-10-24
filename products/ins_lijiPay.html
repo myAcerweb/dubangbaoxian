@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>微信立即支付</title>
+    <link rel="stylesheet" href="../css/loading.css">
+    <link rel="stylesheet" href="../css/normalize.min.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/toast.css">
+  </head>
+  <body>
+		<form id="formid" name="fm" action="" method="post" style="display: none;">
+			<input type="hidden" id="sign" name="sign" value=""/>
+			<input type="hidden" id="sumPayFee" name="sumPayFee" value=""/>
+
+			<input type="hidden" id="orderSource" name="orderSource" value=""/>
+			<!--<input type="hidden" id="operateCode" name="operateCode" value=""/>-->
+			<input type="hidden" id="outOrderNo" name="outOrderNo" value=""/>
+			<input type="hidden" id="callBackFlag" name="callBackFlag" value=""/>
+			<input type="hidden" id="callBackFlag1" name="callBackFlag1" value=""/>
+			<input type="hidden" id="goods" name="goods" value=""></input>
+			<input type="hidden" id="businessType" name="businessType" value=""/>
+			<input type="hidden" id="actionType" name="actionType" value="unifiedorder"/>
+			<input type="hidden" id="callBackUrl" name="callBackUrl" value=""/>
+			<input type="submit" value=""/>
+		</form>
+    <script src="../js/jquery-3.2.0.js"></script>
+    <script src="../js/loading.js"></script>
+    <script type="text/javascript" src="../js/toast.js"></script>
+    <script type="text/javascript" src="../js/mobileapp.js"></script>
+    <script type="text/javascript" src="../js/Util.js"></script>
+    <script type="text/javascript" src="../js/ins_vehicle.js"></script>
+    <script type="text/javascript" src="../js/products/ins_lijiPay.js"></script>
+    <script type="text/javascript" src="../js/wechat.js"></script>
+    <script src="../js/setrem.js"></script>
+    <script type="text/javascript" src="../js/zepto.min.js"></script>
+       <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+ 
+  </body>
+</html>

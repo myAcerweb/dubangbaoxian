@@ -1,0 +1,72 @@
+body{
+	background-image: url("../../images/pic_erweima_bg.png");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	width: 100vw;
+	height: 100vh;
+	box-sizing: border-box;
+	padding: 1.46rem 0.45rem 1.67rem 0.45rem;
+	position: relative;
+}
+
+header{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0.75rem;
+    text-align: center;
+}
+
+.ownerImg {
+  height: 1.2rem;
+  width: 1.2rem;
+  border-radius: 50%
+}
+.ownerName {
+  line-height: 0;
+  font-family: PingFangSC-Regular;
+  font-size: .32rem;
+  color: #3C3B3B;
+  letter-spacing: -0.93px;
+}
+
+.content{
+	width: 100%;
+	height: 100%;
+	box-sizing: border-box;
+	background-color: #f8f8f8;
+	padding: 1.94rem 0.7rem 1.67rem 0.7rem;
+	border-radius: 0.24rem;
+}
+
+.qr{
+	position: relative;
+	width: 100%;
+	box-sizing: border-box;
+	background: #fff;
+	border: 1px solid #eee;
+}
+
+.logo{
+	width:1rem;
+	height: 1rem;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -0.5rem;
+	margin-left: -0.5rem;
+	background: url(../../images//ico_dubang.png) no-repeat #fff center center;
+	background-size: 50%;
+	border: 2px solid #bbb;
+	border-radius: 0.12rem;
+}
+
+.tips{
+	margin: 0;
+	margin-top: 0.6rem;
+	font-family: PingFangSC-Regular;
+	font-size: 0.28rem;
+	color: #414141;
+	text-align: center;
+	line-height: 0.3rem;
+}

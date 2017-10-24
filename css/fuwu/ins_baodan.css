@@ -1,0 +1,85 @@
+.tabs {
+    width: 100%;
+    background-color: #fff;
+    line-height: 0;
+    display: flex;
+    display: -webkit-flex;
+    margin: 0;
+    padding: 0;
+}
+
+.tabs li {
+    list-style: none;
+    flex: 1;
+    -webkit-flex: 1;
+    text-align: center;
+    height: .88rem;
+    line-height: .88rem;
+    font-family: PingFangSC-Regular;
+    font-size: .28rem;
+    color: #A2A2A2;
+    box-sizing: border-box;
+}
+
+.tabs li.active {
+    border-bottom: 1px #D3A27C solid;
+    color: #D3A27C;
+}
+.claimNo{
+    line-height: .4rem;
+    color: #9E9E9E;
+}
+.query {
+    display: none;
+    position: absolute;
+    left: 0;
+    padding-top: 7.4%;
+    width: 100%;
+    z-index: 3;
+    text-align: center;
+}
+
+.query img {
+    width: 22%;
+}
+
+.query p {
+    margin-top: 4.2%;
+    margin-bottom: 5.4%;
+    line-height: 1.5;
+}
+
+.query button {
+    margin: 0;
+}
+
+.queryFixed {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 3;
+    text-align: center;
+    background-color: #f8f8f8;
+    box-shadow: 0 2px 20px 0 rgba(212,208,208,0.50);
+}
+
+.queryFixed p {
+    font-family: PingFangSC-Regular;
+    color: #7A7979;
+    letter-spacing: 0;
+    padding: 5.8% 0 5% 0;
+    line-height: 1;
+}
+
+input.queryNo {
+    display: block;
+    width: 100%;
+    padding: .22rem 6%;
+    margin-bottom: .3rem;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: solid 1px #ddd;
+}

@@ -1,0 +1,98 @@
+item {
+	display: block;
+	height: .98rem;
+	line-height: .98rem;
+	width: calc(100% - .3rem);
+	border-bottom: 1px solid #ececec;
+	color: #616161;
+	background-color: #fff;
+}
+
+item input {
+	width: 50%;
+	float: right;
+	border: none;
+	outline: none;
+	margin-right: .3rem;
+	margin-top: .3rem;
+	text-align: right;
+	background-color: #fff;
+}
+
+.rigb {
+	margin-right: 1rem;
+}
+
+.g-item {
+	height: 1.96rem;
+	background-color: #fff;
+}
+
+.border-none {
+	border-bottom: none;
+}
+
+ ::-webkit-input-placeholder {
+	text-align: right;
+}
+
+ :-ms-input-placeholder {
+	text-align: right;
+}
+
+.input-left::-webkit-input-placeholder {
+	text-align: left;
+}
+
+.input-left:-ms-input-placeholder {
+	text-align: left;
+}
+
+.input-left:-ms-input-placeholder {
+	text-align: left;
+}
+
+.commit {
+	height: .94rem;
+	border: none;
+	outline: none;
+	width: calc(100% - .6rem);
+	margin-left: .3rem;
+	bottom: .3rem;
+	position: fixed;
+	border-radius: .08rem;
+}
+
+.ver {
+	vertical-align: middle;
+	position: absolute;
+	right: .3rem;
+	top: .3rem;
+}
+
+.relative {
+	position: relative;
+}
+
+.width40 {
+	width: 40%;
+}
+
+.arrow {
+	width: auto;
+	height: .3rem;
+}
+
+.height200 {
+	height: 2rem;
+}
+
+.textarea {
+	width: calc(100% - .6rem);
+	height: .88rem;
+	border: none;
+	outline: none;
+	text-align: left;
+	resize: none;
+	background-color: #fff;
+}

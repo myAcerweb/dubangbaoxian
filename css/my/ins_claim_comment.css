@@ -1,0 +1,42 @@
+html {
+    height: 100%;
+}
+
+.box {
+    height: .3rem;
+}
+
+.textarea {
+    border: none;
+    height: 3rem;
+    width: calc(100% - .6rem);
+    background-color: #fff;
+    padding: .2rem .3rem;
+    line-height: 1.1;
+}
+
+.server_a {
+    height: .98rem;
+    line-height: .98rem;
+    width: calc(100% - .6rem);
+}
+
+.server_a img {
+    float: right;
+    margin-top: .34rem;
+    padding-left: .2rem;
+    height: .3rem;
+    width: .3rem;
+}
+
+.comment {
+    margin-top: .9rem;
+    height: .94rem;
+    line-height: .94rem;
+    text-align: center;
+    width: calc(100% - .6rem);
+    margin-left: .3rem;
+    background-color: #d3a27c;
+    color: #fff;
+    border-radius: .08rem;
+}

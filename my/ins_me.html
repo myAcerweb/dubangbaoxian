@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>我的</title>
+		<link rel="stylesheet" href="../css/normalize.min.css">
+		<link rel="stylesheet" href="../css/swiper.min.css">
+		<link rel="stylesheet" href="../css/reset.css">
+		<link rel="stylesheet" href="../css/my/ins_me.css">
+	</head>
+	<body style="background-color: #f8f8f8;">
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide"><img style="width: 100%; min-height: 100%;" src="../images/pic_mybanner.jpg"/></div>
+				<div class="swiper-slide">2</div>
+				<div class="swiper-slide">3</div>
+			</div>
+			<div class="swiper-pagination"></div>
+		</div>
+		<section>
+			<div class="box font28 color-757575 border-right border-bottom timeOut">续保<img src="../images/ico_xubao.png"/></div>
+			<div class="box font28 color-757575 border-right border-bottom lp timeOut">理赔<img src="../images/ico_lipei.png"/></div>
+			<div class="box font28 color-757575 border-bottom timeOut">积分<img src="../images/ico_jifen.png"/></div>
+			<div class="box font28 color-757575 border-right border-bottom dd">订单<img src="../images/ico_dingdan.png"/></div>
+			<div class="box font28 color-757575 border-right border-bottom bd">绑定<img src="../images/ico_bangding.png"/></div>
+			<div class="box font28 color-757575 border-bottom grxx">个人信息<img src="../images/ico_grxx.png"/></div>
+		</section>
+		<script src="../js/setrem.js"></script>
+		<script src="../js/jquery-3.2.0.js"></script>
+		<script src="../js/swiper.jquery.min.js"></script>
+		<script type="text/javascript" src="../js/Util.js"></script>
+		<script type="text/javascript" src="../js/wechat.js"></script>
+		<script type="text/javascript" src="../js/mobileapp.js"></script>
+		   <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+ 
+		<script>
+			var mySwiper = new Swiper('.swiper-container', {
+				direction: 'horizontal',
+				loop: true,
+				pagination: '.swiper-pagination'
+			})
+			var arr = [
+				'#',
+				'#',
+				'#',
+				'ins_order_list',
+				'ins_accreditation',
+				'ins_car_owner_info'
+			]
+			$(".box").click(function () {
+				var s = $(".box").index($(this))
+				window.location.href = arr[s] + '.html?action=newpage'
+			});
+		</script>
+	</body>
+</html>

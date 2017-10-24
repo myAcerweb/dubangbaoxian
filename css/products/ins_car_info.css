@@ -1,0 +1,463 @@
+::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: #212121;
+}
+:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #212121;
+}
+::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #212121;
+}
+:-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: #212121;
+}
+
+/* checkbox */
+
+.mui-checkbox {
+  -webkit-appearance: none;
+  position: relative;
+  width: .44rem;
+  height: .44rem;
+  margin-right: 10px;
+  background-color: #FFFFFF;
+  border: solid 1px #d9d9d9;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-clip: padding-box;
+  display: inline-block;
+}
+.mui-checkbox:focus {
+  outline: 0 none;
+  outline-offset: -2px;
+}
+.mui-checkbox:checked {
+  background-color: #18b4ed;
+  border: solid 1px #FFFFFF;
+}
+.mui-checkbox:checked:before {
+  display: inline-block;
+  margin-top: 1px;
+  margin-left: 2px;
+  font-family: iconfont;
+  content: "\e667";
+  color: #FFFFFF;
+  font-size: 18px;
+}
+.mui-checkbox:disabled {
+  background-color: #d9d9d9;
+  border: solid 1px #d9d9d9;
+}
+.mui-checkbox:disabled:before {
+  display: inline-block;
+  margin-top: 1px;
+  margin-left: 2px;
+  font-family: iconfont;
+  content: "\e667";
+  color: #FFFFFF;
+  font-size: 18px;
+}
+.mui-checkbox.checkbox-green:checked {
+  background-color: #5cb85c;
+}
+.mui-checkbox.checkbox-orange:checked {
+  background-color: #f0ad4e;
+}
+.mui-checkbox.checkbox-s {
+  width: 19px;
+  height: 19px;
+}
+.mui-checkbox.checkbox-s:before {
+  display: inline-block;
+  margin-top: 1px;
+  margin-left: 2px;
+  font-family: iconfont;
+  content: "\e667";
+  color: #FFFFFF;
+  font-size: 13px;
+}
+.mui-checkbox-anim {
+  -webkit-transition: background-color ease 0.2s;
+  transition: background-color ease 0.2s;
+}
+.box {
+  width: 100%;
+  height: .2rem;
+  background-color: #f8f8f8;
+}
+.header {
+  width: calc(100% - .6rem);
+  height: .7rem;
+  line-height: .7rem;
+}
+body {
+  margin-bottom: 1.34rem;
+}
+.search-result {
+  width: calc(100% - .6rem);
+  height: .7rem;
+  line-height: .7rem;
+}
+.header i {
+  float: right;
+  text-decoration: underline;
+}
+.car-number {
+  position: relative;
+  height: .98rem;
+  line-height: .98rem;
+}
+.number-id {
+  position: absolute;
+  left: 2rem;
+  height: .3rem;
+  padding: .34rem 0;
+  padding-left: .2rem;
+  border: none;
+  width: 4rem;
+  outline: none;
+  background-color: #fff;
+}
+.car-number img {
+  position: absolute;
+  top: .3rem;
+  right: .3rem;
+}
+.calender {
+  width: .5rem;
+  height: auto;
+  cursor: pointer;
+  /*background: url(../../images/ico_calender.png);*/
+}
+.camera {
+	position: absolute;
+	background: url(../../images/ico_Combined.png) no-repeat center center;
+	width: 1rem;
+	height: 1rem;
+	background-size: .4rem;
+	top: 0;
+	right: 0;
+}
+.border-bottom {
+  border-bottom: 1px solid #f5f5f5;
+}
+.introduce {
+  line-height: .44rem;
+  display: inline-block;
+  padding-right: 1.2rem;
+}
+.result {
+  height: 2.1rem;
+  width: calc(100% - .6rem);
+  position: relative;
+}
+.price {
+  display: block;
+  padding-left: .4rem;
+  background-image: url('../../images/ico_jiage.png');
+  background-repeat: no-repeat;
+  background-size: .3rem .245rem;
+  height: .26rem;
+  line-height: .26rem;
+}
+.num {
+  display: block;
+  margin-top: -.26rem;
+  margin-left: 2.13rem;
+}
+.select {
+  display: inline-block;
+  position: absolute;
+  top: .82rem;
+  right: 0;
+  width: .44rem;
+}
+.tip {
+  position: relative;
+  width: 100%;
+  height: 1rem;
+}
+.tip i {
+  position: absolute;
+  top: .46rem;
+  right: .3rem;
+}
+footer {
+  width: 100%;
+  height: 1.34rem;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  -webkit-box-shadow: 0 -3px 6px 0 rgba(0, 0, 0, .1);
+  box-shadow: 0 -3px 6px 0 rgba(0, 0, 0, .1);
+}
+footer .btn-lg {
+  position: absolute;
+  top: .2rem;
+  left: 0;
+}
+
+/* firefox */
+
+input[type='date'] {
+  -moz-appearance: textfield;
+}
+
+/* chrome */
+
+input[type=date]::-webkit-inner-spin-button, input[type=date]::-webkit-outer-spin-button {
+  margin: 0;
+}
+select {
+  -webkit-appearance: none;
+  /* chrome */
+  -moz-appearance: none;
+  /* firefox */
+  /* 在IE浏览器中目前还没找到可以去掉小三角的方法。 */
+}
+.number-id {
+  position: absolute;
+  left: 2rem;
+  height: .3rem;
+  padding: .34rem 0;
+  padding-left: .2rem;
+  border: none;
+  width: 4rem;
+  outline: none;
+  background-color: #fff;
+}
+.uiDate {
+	height: .9rem;
+	line-height: .9rem;
+	padding: 0;
+	left: 2.2rem;
+	width: 2.5rem;
+}
+.tbgg.modal {
+	background-color: rgba(0,0,0,0.4);
+	flex-flow: column;
+}
+
+.modal header{
+	color: #fff;
+	box-shadow: 0 2px 4px 0 rgba(0,0,0,0.05);
+}
+
+.modal header h6{
+	font-family: PingFangSC-Medium;
+	font-size: 0.36rem;
+	line-height: 0.34rem;
+	margin: 0.4rem 0 0.26rem 0;
+}
+.modal header p{
+	margin: 0;
+	padding-bottom: 0.4rem;
+	font-family: PingFangSC-Regular;
+	font-size: 0.28rem;
+
+	line-height: 0.28rem;
+}
+
+.modal .content{
+	background: rgba(0,0,0,0.5);
+	box-shadow: 0 2px 4px 0 rgba(0,0,0,0.05);
+	border-radius: 0.24rem;
+	padding: 0;
+	text-align: center;
+}
+
+.modal .shili{
+	padding: 0.2rem;
+	padding-top: 0;
+}
+
+.modal .shili>img{
+	width: 6.18rem;
+}
+
+.modal .shili img{
+	display: block;
+}
+
+.modal .modal-btn{
+	line-height: 0;
+	background: transparent;
+	padding: 0.67rem;
+}
+
+
+.id-card {
+    position: absolute;
+    top: 1.8rem;
+    left: .73rem;
+    z-index: 9;
+    border-radius: .2rem;
+    background-color: #fff;
+    height: 7.5rem;
+    width: calc(100% - 1.46rem);
+    z-index: 9;
+}
+
+.upload-wrong {
+    position: absolute;
+    top: 1.8rem;
+    left: .73rem;
+    z-index: 9;
+    border-radius: .2rem;
+    background-color: #fff;
+    height: 7.54rem;
+    width: calc(100% - 1.46rem);
+    z-index: 9;
+}
+
+.re-upload {
+    border: 2px solid #EF5350;
+}
+
+.user-message {
+    position: absolute;
+    top: 1.8rem;
+    left: .73rem;
+    z-index: 9;
+    border-radius: .2rem;
+    background-color: #fff;
+    height: 5.47rem;
+    width: calc(100% - 1.46rem);
+    z-index: 9;
+}
+
+.list {
+    display: block;
+    height: .3rem;
+    line-height: .3rem;
+    margin-top: .3rem;
+    text-align: center;
+}
+
+.ico-useless {
+    background-image: url(../../images/ico_popup_chezhu.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    top: -.44rem;
+    width: .88rem;
+    height: .88rem;
+    left: calc(50% - .44rem);
+    background-size: cover;
+    background-size: .88rem;
+}
+
+.margin-bottom-85 {
+    margin-bottom: .85rem;
+}
+
+.margin-top-124 {
+    margin-top: 1.24rem;
+}
+
+.ico-useless-useless {
+    background-image: url(../../images/ico_popup_chepai.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    top: -.44rem;
+    width: .88rem;
+    height: .88rem;
+    left: calc(50% - .44rem);
+    background-size: .88rem;
+}
+
+.side {
+    width: 4.18rem;
+    height: 2.37rem;
+    margin-left: .94rem;
+    margin-top: .9rem;
+    margin-bottom: .2rem;
+    border: 1px solid #f5f5f5;
+}
+
+.side-next {
+    width: 4.18rem;
+    height: 2.37rem;
+    margin-left: .94rem;
+    margin-bottom: .5rem;
+    border: 1px solid #f5f5f5;
+    vertical-align: bottom;
+}
+
+.super {
+    vertical-align: super;
+}
+
+.x-id-card {
+    background-image: url('../../images/ico_popup_close.png');
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 8.12rem;
+    width: .88rem;
+    height: .88rem;
+    left: calc(50% - .2315rem);
+    background-size: .88rem;
+}
+
+.img-wrong {
+    width: 100%;
+    vertical-align: bottom;
+}
+
+.wrong-mes {
+    text-align: center;
+    display: block;
+}
+
+.x-user-message {
+    background-image: url('../../images/ico_popup_close.png');
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 6.07rem;
+    width: .88rem;
+    height: .88rem;
+    left: calc(50% - .2315rem);
+    background-size: .88rem;
+}
+
+.wrong-x-user-message {
+    background-image: url('../../images/ico_popup_close.png');
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 8.07rem;
+    width: .88rem;
+    height: .88rem;
+    left: calc(50% - .2315rem);
+    background-size: .88rem;
+}
+
+.layer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #212121;
+    opacity: .34;
+    z-index: 3;
+    top: 0;
+    left: 0;
+}
+
+.padding-left-150 {
+    padding-left: 1rem;
+}
+
+.padding-right-150 {
+    padding-right: 1rem;
+}
+
+.set-input {
+    width: 50%;
+    margin-right: .6rem;
+    outline: none;
+    border: none;
+    line-height: .28rem;
+}

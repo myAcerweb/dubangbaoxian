@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>车主信息</title>
+		<link rel="stylesheet" href="../css/normalize.min.css">
+		<link rel="stylesheet" href="../css/reset.css">
+		<link rel="stylesheet" href="../css/products/ins_car_owner.css">
+		<script type="text/javascript" src="../js/zepto.min.js"></script>
+		<link rel="stylesheet" href="../css/products/ins_zhidingdiqu.css">
+		<link rel="stylesheet" href="../css/loading.css">
+		<link rel="stylesheet" href="../css/toast.css">
+		<link rel="stylesheet" href="../css/switch.css">
+		<style type="text/css">
+			body,
+			html {
+				overflow-y: scroll;
+			}
+		</style>
+	</head>
+	<body>
+		<img class="logo" src="../images/pic_banner_chezhuxinxin.png" alt=""/>
+		
+		<div class="check border-bottom font30 padding-left-30 color-9e9e9e padding-right-30">
+			<span class="" style="z-index: 2;">新车未上牌</span>
+			<label class="right switch sw">
+				<input class="mui-switch" type="checkbox" style="vertical-align: middle;">
+			</label>
+		</div>
+		<div id="areaClick" class="car-number margin-left-30 border-bottom font30 color-9e9e9e">
+			投保地区
+			<input class="number-id font30 color-424242 bg-color-fff" id="area" readonly="readonly" placeholder="请输入地址" code="">
+			<img class="arrow" src="../images/ico_arrow.png"/>
+		</div>
+		<div class="car-number margin-left-30 border-bottom font30 color-9e9e9e">
+			车牌号码
+			<input id="plate" maxlength="8" onchenge="plateChange()" class="number-id font30 color-212121" type="text" placeholder="沪A8888" onfocus="this.placeholder=''" onblur="this.placeholder='沪A8888'"/>
+			<div class="camera chepai" src="../images/ico_Combined.png"></div>
+			<!--<img class="camera chepai" src="../images/ico_Combined.png"/>-->
+			<!--云识别驾驶证需要的form 常态是隐藏-->
+			<form id="plateForm" style="display: none" method="post" enctype="multipart/form-data" style="text-align:center;margin:0 auto;">
+				<input type="hidden" name="action" value="driving.scan"/>
+				<p>
+					<input onchange="plateOnChange()" required="required" type="file" name="file" id="plateFile" value=""/>
+				</p>
+				<span style="color: red;">
+					支持的文件格式：jpg、bmp、jpeg、png。 最大可上传：5M
+				</span>
+				<p>用户名:
+					<input required="required" value="f251a247-8241-4dab-909a-96f4e970f472" type="text" style="width: 300px;" name="username" onfocus="func1(this);" onblur="func2(this);"/>
+				</p>
+				<p>密&nbsp;码:
+					<input required="required" value="BWCTskGmSynFrbCCWWrmutRFvTyVyW" type="text" style="width: 300px;" name="password" onfocus="func1(this);" onblur="func2(this);"/>
+				</p>
+				<p id="label_keyLang">返回格式:
+					<input value="0" name="format" type="radio">
+					<label for="key_eng_default">xml</label>
+					<input value="1" name="format" checked="checked" type="radio">
+					<label for="key_eng">json</label>
+				</p>
+				<input type="submit" value="提交"/>
+			</form>
+		</div>
+		<div class="bg-color-f5f5f5 font24 check padding-left-30 color-9e9e9e">车主信息核对</div>
+		<div class="car-number margin-left-30 border-bottom font30 color-9e9e9e">
+			车主姓名
+			<input id="owner" class="number-id font30 color-212121" type="text" placeholder="请输入姓名" onfocus="this.placeholder=''" onblur="this.placeholder='请输入姓名'"/>
+		</div>
+		<div class="car-number margin-left-30 border-bottom font30 color-9e9e9e">
+			证件证号
+			<input id="ownerNum" style="text-transform: uppercase;" class="number-id font30 color-212121" placeholder="请输入证件号" onfocus="this.placeholder=''" onblur="this.placeholder='请输入证件号'"/>
+			<div class="camera img-id-card" src="../images/ico_Combined.png" onclick="shenfenclick()"></div>
+			<!--<img class="camera img-id-card" src="../images/ico_Combined.png" onclick="shenfenclick()"/>-->
+			<!--云识别身份证需要的form 常态是隐藏-->
+			<form id="uploadForm" name="uploadForm" method="post" enctype="multipart/form-data" style="display: none;">
+				<input type="hidden" name="action" value="idcard.scan"/>
+				<p>
+					<input required="required" onchange="fileChange()" type="file" name="file" id="file" value=""/>
+				</p>
+				<span style="color: red;">
+					支持的文件格式：jpg、bmp、jpeg、png。 最大可上传：5M
+				</span>
+				<p>用户名:
+					<input required="required" value="f251a247-8241-4dab-909a-96f4e970f472" type="text" style="width: 300px;" name="username" onfocus="func1(this);" onblur="func2(this);"/>
+				</p>
+				<p>密&nbsp;码:
+					<input required="required" value="BWCTskGmSynFrbCCWWrmutRFvTyVyW" type="text" style="width: 300px;" name="password" onfocus="func1(this);" onblur="func2(this);"/>
+				</p>
+				<p>是否显示座标:
+					<input value="1" name="er" checked="checked" type="radio">
+					<label for="key_eng_default">不显示</label>
+					<input value="0" name="er" type="radio">
+					<label for="key_eng">显示</label>
+				</p>
+				<p>是否返回头像图片流:
+					<input value="0" name="header" checked="checked" type="radio">
+					<label for="key_eng_default">否</label>
+					<input value="1" name="header" type="radio">
+					<label for="key_eng">是</label>
+				</p>
+				<p id="label_keyLang">返回格式:
+					<input value="0" name="format" type="radio">
+					<label for="key_eng_default">xml</label>
+					<input value="1" name="format" checked="checked" type="radio">
+					<label for="key_eng">json</label>
+				</p>
+				<input type="submit" value="提交"/>
+			</form>
+		</div>
+		<button id='startInsure' class="btn-lg bg-color-d3a27c color-fff font34 margin-top-90">开始投保</button>
+		<p class="phone algin-center margin-top-115 color-d3a27c font26">服务电话：
+			<a class="color-d3a27c font26 " href="tel://95586">95586</a>
+		</p>
+		<p class="copyright font20 color-9e9e9e algin-center">Copyright @ 2015-2017dbic.com.cn</p>
+		<!-- 身份证上传 -->
+		<div class="id-card none">
+			<div class="ico-useless"></div>
+			<span class="list margin-top-124">
+				<i class="left font28 color-9e9e9e padding-left-150">姓名</i>
+				<input id="owner1" class="right font28 color-9e9e9e padding-right-150 set-input input-idCard" value="张三">
+			</span>
+			<span class="list">
+				<i class="left font28 color-9e9e9e padding-left-150">身份证号</i>
+				<input id="ownerId1" class="right font28 color-9e9e9e padding-right-150 set-input input-idCard" value="381010199411111231">
+			</span>
+			<!-- <span class="list">
+				<i class="left font28 color-9e9e9e padding-left-150">有效期限</i>
+				<input class="right font28 color-9e9e9e padding-right-150 set-input input-idCard" placeholder="">
+			</span> -->
+			<button id="querenshenfen" class="btn-lg bg-color-d3a27c color-fff font34 super confirm-id-card margin-top-30" style="position: absolute;">确定</button>
+			<div class="x-id-card" id="idcard_lic_close"></div>
+		</div>
+		<!-- 用户信息 -->
+		<div class="user-message none">
+			<div class="ico-useless-useless"></div>
+			<span class="list margin-top-124">
+				<i class="left font28 color-9e9e9e padding-left-150">车牌号码</i>
+				<input id='vehicleNum' class="right font28 color-9e9e9e set-input" placeholder="沪A36813" style="line-height: .28rem;">
+			</span>
+			<span class="list">
+				<i class="left font28 color-9e9e9e padding-left-150">发动机号</i>
+				<input id="vehicleEngine" class="right font28 color-9e9e9e set-input" placeholder="A36813" style="line-height: .28rem;">
+			</span>
+			<span class="list">
+				<i class="left font28 color-9e9e9e padding-left-150">车架号码</i>
+				<input id="cheJaHao" class="right font28 color-9e9e9e set-input" placeholder="SADA36813" style="line-height: .28rem;">
+			</span>
+			<span class="list margin-bottom-85">
+				<i class="left font28 color-9e9e9e padding-left-150">品牌型号</i>
+				<input id='vehicleModel' class="right font28 color-9e9e9e set-input" placeholder="北京奔驰" style="line-height: .28rem;">
+			</span>
+			<button id="insureVehicleMessage" class="btn-lg bg-color-d3a27c color-fff font34 super confirm-info" style="position: absolute;">确定</button>
+			<div class="x-user-message" id="dirver_lic_close"></div>
+		</div>
+		<!-- 上传错误 -->
+		<div class="upload-wrong none">
+			<img class="img-wrong" src="../images/pic_bg_shibieshibai.png"/>
+			<i class="font28 color-5c5c5c wrong-mes">识别失败，请重新上传识别</i>
+			<button class="btn-lg bg-color-fff color-EF5350 font34 super re-upload margin-top-60 bold" style="position: absolute;">重新上传</button>
+			<div class="wrong-x-user-message"></div>
+		</div>
+		<div class="layer none"></div>
+		<section class="place bg-color-f8f8f8 none">
+			<div class="p-search">
+				<input class="input-p-search font28 bg-color-ccc" type="text" placeholder="查询">
+			</div>
+			<div class="tb">
+				<div class="tb-position font28 color-757575 margin-left-30 padding-top-30">
+					投保地区
+					<div class="local font32 color-d3a27c" style="min-width: 1.5rem;"></div>
+				</div>
+				<div class="tb-include font28 color-757575 margin-left-30 padding-top-30">
+					全国（不含港澳台）
+					<div class="qg font32 color-d3a27c">全国</div>
+				</div>
+			</div>
+		</section>
+		<div id="selectArea" style="display: none;" class="bg-color-f8f8f8 newBg">
+			<!--<input class="search font28 margin-left-30" type="text" placeholder="搜索">-->
+			<div class="bg-color-fff">
+				<div class="choose">
+					<span class="font28 color-757575 block">投保地区</span>
+					<div id="insureArea" class="xuanzhong color-d3a27c"></div>
+				</div>
+			</div>
+			<span class="shenfen margin-left-30 letter font32 block" id="prov_div" style="display: none;">
+				<img src="../images/ico_arrow.png" alt="" />
+			</span>
+			<section class="citys bg-color-fff" id="city_div" style="display: none">
+				<img style="display: none;" src="../images/ico_ok.png" class="gouxuan"/>
+				<div class="city font30 color-616161 diqu"></div>
+			</section>
+			<div id="box"></div>
+			<button id="getArea" class="btn-lg bg-color-d3a27c color-fff font34 super confirm-info">确定</button>
+		</div>
+		<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+		<script src="../js/jquery-3.2.0.js"></script>
+		<script type="text/javascript" src="../js/Util.js"></script>
+		<script type="text/javascript" src='../js/loading.js'></script>
+		<script type="text/javascript" src="../js/toast.js"></script>
+		<script type="text/javascript" src="../js/wechat.js"></script>
+		<script type="text/javascript" src="../js/mobileapp.js"></script>
+		<script type="text/javascript" src="../js/ins_vehicle.js"></script>
+		<script src="../js/setrem.js"></script>
+		<script src="../js/products/ins_car_onwner.js"></script>
+		   <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+ 
+	</body>
+</html>
